@@ -1,3 +1,0 @@
-https://dsis-scss.github.io/index.html
-https://dsis-scss.github.io/2022/07/27/hello-world/
-https://dsis-scss.github.io/
