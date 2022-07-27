@@ -3,11 +3,11 @@
   <title>团队新人指引&amp;知识库</title>
   
   <subtitle>华中科技大学国家光电研究中心智能数据存储与管理实验室</subtitle>
-  <link href="https://dsis_scss.gitee.io/knowledge_base_page/atom.xml" rel="self"/>
+  <link href="https://dsis-scss.github.io/atom.xml" rel="self"/>
   
-  <link href="https://dsis_scss.gitee.io/knowledge_base_page/"/>
+  <link href="https://dsis-scss.github.io/"/>
   <updated>2022-07-27T07:20:02.431Z</updated>
-  <id>https://dsis_scss.gitee.io/knowledge_base_page/</id>
+  <id>https://dsis-scss.github.io/</id>
   
   <author>
     <name>DSIS_SCSS</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://dsis_scss.gitee.io/knowledge_base_page/2022/07/27/hello-world/"/>
-    <id>https://dsis_scss.gitee.io/knowledge_base_page/2022/07/27/hello-world/</id>
+    <link href="https://dsis-scss.github.io/2022/07/27/hello-world/"/>
+    <id>https://dsis-scss.github.io/2022/07/27/hello-world/</id>
     <published>2022-07-27T07:20:02.431Z</published>
     <updated>2022-07-27T07:20:02.431Z</updated>
     
