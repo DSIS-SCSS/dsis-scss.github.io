@@ -6,7 +6,7 @@
   <link href="https://dsis-scss.github.io/atom.xml" rel="self"/>
   
   <link href="https://dsis-scss.github.io/"/>
-  <updated>2022-07-28T04:03:56.918Z</updated>
+  <updated>2022-07-28T04:09:35.716Z</updated>
   <id>https://dsis-scss.github.io/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="https://dsis-scss.github.io/wiki/test%E7%9F%A5%E8%AF%86/"/>
     <id>https://dsis-scss.github.io/wiki/test%E7%9F%A5%E8%AF%86/</id>
     <published>2022-07-27T09:02:26.000Z</published>
-    <updated>2022-07-28T04:03:56.918Z</updated>
+    <updated>2022-07-28T04:09:35.716Z</updated>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="test-action">test Action</h1><h2 id="code-test">code test</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=a; i++) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Hello world!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="math-test">math test</h2><p><span class="math display">\[F 1=\frac{2 \times P P V \times T P R}{P P V+T P R}\]</span></p><p><span class="math display">\[\rho\left(y_{i}, \hat{y}_{i}\right)=\frac{\operatorname{cov}\left(y_{i},\hat{y}_{i}\right)}{\sqrt{\operatorname{var}\left(y_{i}\right)\operatorname{var}\left(\hat{y}_{i}\right)}}\]</span></p><p>这是一个行内公式<span class="math inline">\(S M A P E=\frac{100\%}{n} \sum_{i=1}^{n}\frac{\left|\hat{y}_{i}-y_{i}\right|}{\left(\left|\hat{y}_{i}\right|+\left|y_{i}\right|\right)/ 2}\)</span>是否可以正常显示</p><h2 id="table-test">table test</h2><table style="width:100%;"><colgroup><col style="width: 1%" /><col style="width: 4%" /><col style="width: 2%" /><col style="width: 42%" /><col style="width: 7%" /><col style="width: 21%" /><col style="width: 3%" /><col style="width: 10%" /><col style="width: 1%" /><col style="width: 3%" /></colgroup><thead><tr class="header"><th style="text-align: center;">Num</th><th style="text-align: center;">Short</th><th style="text-align: center;">level</th><th style="text-align: center;">Tittle</th><th style="text-align: center;">Publisher</th><th style="text-align: center;">dblp</th><th style="text-align: center;">Deadline</th><th style="text-align: center;">publish time</th><th style="text-align: center;">Tag</th><th style="text-align: center;">Related?</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">1</td><td style="text-align: center;">TOCS</td><td style="text-align: center;">A</td><td style="text-align: center;">ACM Transactions on ComputerSystems</td><td style="text-align: center;">ACM</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tocs/</td><td style="text-align: center;"></td><td style="text-align: center;">May;November</td><td style="text-align: center;"></td><td style="text-align: center;">Y</td></tr><tr class="even"><td style="text-align: center;">2</td><td style="text-align: center;">TOS</td><td style="text-align: center;">A</td><td style="text-align: center;">ACM Transactions on Storage</td><td style="text-align: center;">ACM</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tos/</td><td style="text-align: center;"></td><td style="text-align: center;">February;May;August;August</td><td style="text-align: center;"></td><td style="text-align: center;">Y</td></tr><tr class="odd"><td style="text-align: center;">3</td><td style="text-align: center;">TCAD</td><td style="text-align: center;">A</td><td style="text-align: center;">IEEE Transactions on Computer-AidedDesign of Integrated Circuits And System</td><td style="text-align: center;">IEEE</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tcad/</td><td style="text-align: center;"></td><td style="text-align: center;">Every month</td><td style="text-align: center;"></td><td style="text-align: center;">N</td></tr><tr class="even"><td style="text-align: center;">4</td><td style="text-align: center;">TC</td><td style="text-align: center;">A</td><td style="text-align: center;">IEEE Transactions on Computers</td><td style="text-align: center;">IEEE</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tc/</td><td style="text-align: center;"></td><td style="text-align: center;">Every month</td><td style="text-align: center;"></td><td style="text-align: center;">Y</td></tr><tr class="odd"><td style="text-align: center;">5</td><td style="text-align: center;">TPDS</td><td style="text-align: center;">A</td><td style="text-align: center;">IEEE Transactions on Parallel andDistributed Systems</td><td style="text-align: center;">IEEE</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tpds/</td><td style="text-align: center;"></td><td style="text-align: center;">Every month</td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr></tbody></table>]]></content>
     
     
       
       
-    <summary type="html">
-</summary>
+    <summary type="html">&lt;h1 id=&quot;test-action&quot;&gt;test Action&lt;/h1&gt;
+&lt;h2 id=&quot;code-test&quot;&gt;code test&lt;/h2&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;sp</summary>
       
     
     
@@ -44,7 +45,7 @@
     <link href="https://dsis-scss.github.io/wiki/test%E5%B7%A5%E5%85%B7/"/>
     <id>https://dsis-scss.github.io/wiki/test%E5%B7%A5%E5%85%B7/</id>
     <published>2022-07-27T09:02:19.000Z</published>
-    <updated>2022-07-28T04:03:56.918Z</updated>
+    <updated>2022-07-28T04:09:35.716Z</updated>
     
     <content type="html"><![CDATA[<p><img src="logo.png" /></p>]]></content>
     
@@ -69,7 +70,7 @@
     <link href="https://dsis-scss.github.io/wiki/test%E8%B5%84%E6%BA%90/"/>
     <id>https://dsis-scss.github.io/wiki/test%E8%B5%84%E6%BA%90/</id>
     <published>2022-07-27T09:01:14.000Z</published>
-    <updated>2022-07-28T04:03:56.918Z</updated>
+    <updated>2022-07-28T04:09:35.716Z</updated>
     
     <content type="html"><![CDATA[]]></content>
     
