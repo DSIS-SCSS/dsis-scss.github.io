@@ -29,6 +29,15 @@
   </url>
   
   <url>
+    <loc>https://dsis-scss.github.io/wiki/DDIA-%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2022-07-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dsis-scss.github.io/wiki/test%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2022-07-28</lastmod>
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://dsis-scss.github.io/wiki/test%E7%9F%A5%E8%AF%86/</loc>
+    <loc>https://dsis-scss.github.io/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2022-07-28</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://dsis-scss.github.io/wiki/test%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://dsis-scss.github.io/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/</loc>
     
     <lastmod>2022-07-28</lastmod>
     
@@ -103,6 +112,13 @@
 
   
   <url>
+    <loc>https://dsis-scss.github.io/categories/resource/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dsis-scss.github.io/categories/tools/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -117,7 +133,7 @@
   </url>
   
   <url>
-    <loc>https://dsis-scss.github.io/categories/resource/</loc>
+    <loc>https://dsis-scss.github.io/categories/resource/%E4%B9%A6%E7%9B%AE/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -125,6 +141,20 @@
   
   <url>
     <loc>https://dsis-scss.github.io/categories/tools/%E7%A7%91%E7%A0%94%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dsis-scss.github.io/categories/knowledge/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-System/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dsis-scss.github.io/categories/knowledge/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

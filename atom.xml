@@ -6,7 +6,7 @@
   <link href="https://dsis-scss.github.io/atom.xml" rel="self"/>
   
   <link href="https://dsis-scss.github.io/"/>
-  <updated>2022-07-28T08:01:20.696Z</updated>
+  <updated>2022-07-28T08:54:56.281Z</updated>
   <id>https://dsis-scss.github.io/</id>
   
   <author>
@@ -17,25 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test知识</title>
-    <link href="https://dsis-scss.github.io/wiki/test%E7%9F%A5%E8%AF%86/"/>
-    <id>https://dsis-scss.github.io/wiki/test%E7%9F%A5%E8%AF%86/</id>
-    <published>2022-07-27T09:02:26.000Z</published>
-    <updated>2022-07-28T08:01:20.696Z</updated>
+    <title>时序预测论文整理</title>
+    <link href="https://dsis-scss.github.io/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/"/>
+    <id>https://dsis-scss.github.io/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/</id>
+    <published>2022-07-28T08:39:34.000Z</published>
+    <updated>2022-07-28T08:54:56.281Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="test-action">test Action</h1><h2 id="code-test">code test</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=a; i++) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Hello world!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="math-test">math test</h2><p><span class="math display">\[F 1=\frac{2 \times P P V \times T P R}{P P V+T P R}\]</span></p><p><span class="math display">\[\rho\left(y_{i}, \hat{y}_{i}\right)=\frac{\operatorname{cov}\left(y_{i},\hat{y}_{i}\right)}{\sqrt{\operatorname{var}\left(y_{i}\right)\operatorname{var}\left(\hat{y}_{i}\right)}}\]</span></p><p>这是一个行内公式<span class="math inline">\(S M A P E=\frac{100\%}{n} \sum_{i=1}^{n}\frac{\left|\hat{y}_{i}-y_{i}\right|}{\left(\left|\hat{y}_{i}\right|+\left|y_{i}\right|\right)/ 2}\)</span>是否可以正常显示</p><h2 id="table-test">table test</h2><table style="width:100%;"><colgroup><col style="width: 1%" /><col style="width: 4%" /><col style="width: 2%" /><col style="width: 42%" /><col style="width: 7%" /><col style="width: 21%" /><col style="width: 3%" /><col style="width: 10%" /><col style="width: 1%" /><col style="width: 3%" /></colgroup><thead><tr class="header"><th style="text-align: center;">Num</th><th style="text-align: center;">Short</th><th style="text-align: center;">level</th><th style="text-align: center;">Tittle</th><th style="text-align: center;">Publisher</th><th style="text-align: center;">dblp</th><th style="text-align: center;">Deadline</th><th style="text-align: center;">publish time</th><th style="text-align: center;">Tag</th><th style="text-align: center;">Related?</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">1</td><td style="text-align: center;">TOCS</td><td style="text-align: center;">A</td><td style="text-align: center;">ACM Transactions on ComputerSystems</td><td style="text-align: center;">ACM</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tocs/</td><td style="text-align: center;"></td><td style="text-align: center;">May;November</td><td style="text-align: center;"></td><td style="text-align: center;">Y</td></tr><tr class="even"><td style="text-align: center;">2</td><td style="text-align: center;">TOS</td><td style="text-align: center;">A</td><td style="text-align: center;">ACM Transactions on Storage</td><td style="text-align: center;">ACM</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tos/</td><td style="text-align: center;"></td><td style="text-align: center;">February;May;August;August</td><td style="text-align: center;"></td><td style="text-align: center;">Y</td></tr><tr class="odd"><td style="text-align: center;">3</td><td style="text-align: center;">TCAD</td><td style="text-align: center;">A</td><td style="text-align: center;">IEEE Transactions on Computer-AidedDesign of Integrated Circuits And System</td><td style="text-align: center;">IEEE</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tcad/</td><td style="text-align: center;"></td><td style="text-align: center;">Every month</td><td style="text-align: center;"></td><td style="text-align: center;">N</td></tr><tr class="even"><td style="text-align: center;">4</td><td style="text-align: center;">TC</td><td style="text-align: center;">A</td><td style="text-align: center;">IEEE Transactions on Computers</td><td style="text-align: center;">IEEE</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tc/</td><td style="text-align: center;"></td><td style="text-align: center;">Every month</td><td style="text-align: center;"></td><td style="text-align: center;">Y</td></tr><tr class="odd"><td style="text-align: center;">5</td><td style="text-align: center;">TPDS</td><td style="text-align: center;">A</td><td style="text-align: center;">IEEE Transactions on Parallel andDistributed Systems</td><td style="text-align: center;">IEEE</td><tdstyle="text-align: center;">http://dblp.uni-trier.de/db/journals/tpds/</td><td style="text-align: center;"></td><td style="text-align: center;">Every month</td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<table><colgroup><col style="width: 26%" /><col style="width: 52%" /><col style="width: 21%" /></colgroup><thead><tr class="header"><th>Tittle</th><th>Algorithm</th><th>Idea</th></tr></thead><tbody><tr class="odd"><td><strong>classical methods</strong></td><td></td><td></td></tr><tr class="even"><td>An adaptive prediction approach based on workload patterndiscrimination in the cloud</td><td>An adaptive approach</td><td>categorizes the workloads into different classes which areautomatically assigned for different models according to workloadfeatures</td></tr><tr class="odd"><td>TODO</td><td>Exponential Smoothing(ES)</td><td></td></tr><tr class="even"><td>A Hierarchical Framework for Modeling and Forecasting Web ServerWorkload</td><td>Auto Regression(AR)</td><td>A linear combination of past values of the variable underconsideration is used to forecast the value for upcoming timeinstances.</td></tr><tr class="odd"><td>Dual time-scale distributed capacity allocation and load redirectalgorithms for cloud systems</td><td>Moving Average(MA)</td><td>non-linear optimization The model is appropriate for time seriesexhbiting seasonal behavior only</td></tr><tr class="even"><td>Efficient autoscaling in the cloud using predictive models forworkload forecasting</td><td>Autoregressive Integrated Moving Average(ARIMA)</td><td>also discussed the challenges involved in auto scaling in a cloudenvironment</td></tr><tr class="odd"><td>Workload Prediction Using ARIMA Model and Its Impact on CloudApplications’ QoS</td><td>Autoregressive Integrated Moving Average(ARIMA)</td><td>ARIMA on different confidence interval to predict web serverworkload</td></tr><tr class="even"><td>Workload characterization and prediction in the cloud: A multipletime series approach</td><td>Hidden Markov Model</td><td>distinguish the temporal correlations in obtained clusters ofVMs</td></tr><tr class="odd"><td>A workload analysis of live event broadcast service in cloud</td><td>Regression techniques</td><td>the approach is based on simple statistical models that might notcapture the patterns in more complex data</td></tr><tr class="even"><td>Workload characterization and prediction in the cloud: A multipletime series approach</td><td>multiple time series approch</td><td>The model does a grouping of similar applications's need in order toimprove the accuracy of predictions</td></tr><tr class="odd"><td><strong>machine learning methods</strong></td><td></td><td></td></tr><tr class="even"><td>Support vector machines experts for time series forecasting</td><td>Self organizing map(SOM) and support vector machines(SVMs)</td><td>Self organizing map was used to cluster the data in differentregions while SVMs were used to predict the future data</td></tr><tr class="odd"><td>Referential kNN Regression for Financial Time SeriesForecasting</td><td><span class="math inline">\(k\)</span> Nearest Neighbors(kNN)</td><td>For financial time series prediction. kNNs are lazy learners andneed high computational cost</td></tr><tr class="even"><td>Hierarchical neural networks based prediction and control of dynamicreconfiguration for multilevel embedded systems</td><td>the Neural network</td><td>used to model workload variations in multimidia designs</td></tr><tr class="odd"><td>A cost-aware auto-scaling approach using the workload prediction inservice clouds</td><td>Linear regression</td><td>the predicted workload was used to decide the type of scaling</td></tr><tr class="even"><td>Efficient resources provisioning based on load forecasting incloud</td><td>Support Vector Regression(SVR) and Kalman smoother</td><td>It achieved high prediction accuracy</td></tr><tr class="odd"><td>Combining time series prediction models using genetic algorithm toautoscaling Web applications hosted in the cloud infrastructure</td><td>Ensemble based model</td><td>It uses five different base prediction models. Each model isassigned a weight and contributes accordingly in predictions. The weightare assigned and optimized using genetic algorithm</td></tr><tr class="even"><td>Empirical prediction models for adaptive resource provisioning inthe cloud</td><td>Neural network and Linear regression</td><td></td></tr><tr class="odd"><td>RVLBPNN: A Workload Forecasting Model for Smart Cloud Computing</td><td>back propagation learning algorithm</td><td>It adjusts the weights of model according to error trend.</td></tr><tr class="even"><td>A Predictive Method for Workload Forecasting in the CloudEnvironment</td><td>neural network and steepest descent learning algorithm</td><td>suffers from high prediction errors.</td></tr><tr class="odd"><td>Workload prediction in cloud using artificial neural network andadaptive differential evolution</td><td>neural network and adaptive differential evolution</td><td></td></tr></tbody></table>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;test-action&quot;&gt;test Action&lt;/h1&gt;
-&lt;h2 id=&quot;code-test&quot;&gt;code test&lt;/h2&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;sp</summary>
+    <summary type="html">&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 26%&quot; /&gt;
+&lt;col style=&quot;width: 52%&quot; /&gt;
+&lt;col style=&quot;width: 21%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+</summary>
       
     
     
     
     <category term="知识" scheme="https://dsis-scss.github.io/categories/knowledge/"/>
+    
+    <category term="论文" scheme="https://dsis-scss.github.io/categories/knowledge/%E8%AE%BA%E6%96%87/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分布式系统入门(MIT 6.824)</title>
+    <link href="https://dsis-scss.github.io/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%85%A5%E9%97%A8/"/>
+    <id>https://dsis-scss.github.io/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%85%A5%E9%97%A8/</id>
+    <published>2022-07-27T09:02:26.000Z</published>
+    <updated>2022-07-28T08:54:56.281Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="mit6.824课程主页">MIT6.824课程主页</h2><p><ahref="http://nil.csail.mit.edu/6.824/2022/">http://nil.csail.mit.edu/6.824/2022/</a></p><h2 id="课程安排">课程安排</h2><p><ahref="http://nil.csail.mit.edu/6.824/2022/schedule.html">http://nil.csail.mit.edu/6.824/2022/schedule.html</a></p><h2 id="论文翻译">论文翻译</h2><ul><li><ahref="https://github.com/ConnorChen97/paper/blob/0a72fe0b354b65bac25e45163163eb2573f1faf2/map-reduce/map-reduce-cn.pdf">MapReduce(2004)</a></li><li><ahref="https://spongecaptain.cool/post/paper/googlefilesystem/">GFS(2003)</a></li><li><ahref="https://www.cnblogs.com/brianleelxt/p/13245754.html">Fault-TolerantVirtual Machines (2010)</a></li><li><ahref="https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md">Raft(2014)</a></li></ul><h2 id="lab参考">lab参考</h2><ul><li><ahref="https://github.com/SwordHarry/MIT6.824_2021_note">SwordHarry/MIT6.824_2021_note</a></li></ul><h2 id="参考书目">参考书目</h2><p><ahref="/wiki/DDIA-设计数据密集型应用">DDIA-设计数据密集型应用</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;mit6.824课程主页&quot;&gt;MIT6.824课程主页&lt;/h2&gt;
+&lt;p&gt;&lt;a
+href=&quot;http://nil.csail.mit.edu/6.824/2022/&quot;&gt;http://nil.csail.mit.edu/6.824/2022/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 i</summary>
+      
+    
+    
+    
+    <category term="知识" scheme="https://dsis-scss.github.io/categories/knowledge/"/>
+    
+    <category term="体系结构(System)" scheme="https://dsis-scss.github.io/categories/knowledge/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-System/"/>
     
     
   </entry>
@@ -45,7 +80,7 @@
     <link href="https://dsis-scss.github.io/wiki/test%E5%B7%A5%E5%85%B7/"/>
     <id>https://dsis-scss.github.io/wiki/test%E5%B7%A5%E5%85%B7/</id>
     <published>2022-07-27T09:02:19.000Z</published>
-    <updated>2022-07-28T08:01:20.696Z</updated>
+    <updated>2022-07-28T08:54:56.281Z</updated>
     
     <content type="html"><![CDATA[<p><img src="logo.png" /></p>]]></content>
     
@@ -66,24 +101,28 @@
   </entry>
   
   <entry>
-    <title>test资源</title>
-    <link href="https://dsis-scss.github.io/wiki/test%E8%B5%84%E6%BA%90/"/>
-    <id>https://dsis-scss.github.io/wiki/test%E8%B5%84%E6%BA%90/</id>
+    <title>DDIA-设计数据密集型应用</title>
+    <link href="https://dsis-scss.github.io/wiki/DDIA-%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8/"/>
+    <id>https://dsis-scss.github.io/wiki/DDIA-%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8/</id>
     <published>2022-07-27T09:01:14.000Z</published>
-    <updated>2022-07-28T08:01:20.696Z</updated>
+    <updated>2022-07-28T08:54:56.281Z</updated>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="书名">书名</h2><p>《Designing Data-Intensive Applications》</p><h2 id="简介">简介</h2><p>现今，尤其是在互联网领域，大多数应用都属于数据密集型应用。本书从底层数据结构到顶层架构设计，将数据系统设计中的精髓娓娓道来。其中的宝贵经验无论是对架构师、DBA、还是后端工程师、甚至产品经理都会有帮助。</p><p>实验室有一部分研究是在分布式多机系统下的数据存储与管理，特别是应用于云硬盘系统的存储管理，该书可以有助于理解数据密集型应用所需要考虑的问题，发现可以优化的点，以及对于分布式架构有所了解。</p><h2 id="中文翻译">中文翻译</h2><p><a href="http://ddia.vonng.com/#/">设计数据密集型应用 -中文翻译</a></p>]]></content>
     
     
       
       
-    <summary type="html">
-</summary>
+    <summary type="html">&lt;h2 id=&quot;书名&quot;&gt;书名&lt;/h2&gt;
+&lt;p&gt;《Designing Data-Intensive Applications》&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
+&lt;p&gt;现今，尤其是在互联网领域，大多数应用都属于数据密集型应用。本书从底层数据结构到顶层架构设计，将数据系</summary>
       
     
     
     
     <category term="资源" scheme="https://dsis-scss.github.io/categories/resource/"/>
+    
+    <category term="书目" scheme="https://dsis-scss.github.io/categories/resource/%E4%B9%A6%E7%9B%AE/"/>
     
     
   </entry>
