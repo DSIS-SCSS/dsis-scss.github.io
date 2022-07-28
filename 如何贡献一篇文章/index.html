@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>智能缓存&amp;资源调度组</title>
+    
+    
+        <meta name="keywords" content="智能缓存&amp;资源调度组" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="如何贡献一篇文章? 1. 安装hexo静态博客生成工具 根据官方指引文档进行安装 2. clone知识库源文件到本地 知识库采用双repo备份的形式，你可以clone其中任意一个到本地，但注意只有gitee中的会在pus之后完成自动部署，所以建议全程使用gitee操作 gitee repo: https:&#x2F;&#x2F;gitee.com&#x2F;dsis_scss&#x2F;knowledge_base_page githu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="智能缓存&amp;资源调度组">
+<meta property="og:url" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:site_name" content="智能缓存&amp;资源调度组">
+<meta property="og:description" content="如何贡献一篇文章? 1. 安装hexo静态博客生成工具 根据官方指引文档进行安装 2. clone知识库源文件到本地 知识库采用双repo备份的形式，你可以clone其中任意一个到本地，但注意只有gitee中的会在pus之后完成自动部署，所以建议全程使用gitee操作 gitee repo: https:&#x2F;&#x2F;gitee.com&#x2F;dsis_scss&#x2F;knowledge_base_page githu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/1.png">
+<meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/3.png">
+<meta property="article:published_time" content="2022-07-12T06:30:12.000Z">
+<meta property="article:modified_time" content="2022-07-28T05:22:01.721Z">
+<meta property="article:author" content="DSIS_SCSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/1.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="智能缓存&amp;资源调度组" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">智能缓存&amp;资源调度组</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a>
+                
+                    <a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a>
+                
+                    <a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            知识
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/test%E7%9F%A5%E8%AF%86/">test知识</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            资源
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/test%E8%B5%84%E6%BA%90/">test资源</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            科研软件
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/test%E5%B7%A5%E5%85%B7/">test工具</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>链接</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://wnlo.hust.edu.cn/">华中科技大学武汉光电国家研究中心官网</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://idsm.wnlo.hust.edu.cn/index.htm">智能数据存储与管理实验室主页</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="如何贡献一篇文章">如何贡献一篇文章?</h1>
+<h2 id="安装hexo静态博客生成工具">1. 安装<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>静态博客生成工具</h2>
+<p>根据<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方指引文档</a>进行安装</p>
+<h2 id="clone知识库源文件到本地">2. clone知识库源文件到本地</h2>
+<p>知识库采用双repo备份的形式，你可以clone其中任意一个到本地，但注意只有gitee中的会在pus之后完成自动部署，所以建议全程使用gitee操作
+gitee repo: <a
+target="_blank" rel="noopener" href="https://gitee.com/dsis_scss/knowledge_base_page">https://gitee.com/dsis_scss/knowledge_base_page</a>
+github repo: <a href=""></a> 例如： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitee.com/dsis_scss/knowledge_base_page.git</span><br></pre></td></tr></table></figure></p>
+<h2 id="写作">3. 写作</h2>
+<h3 id="创建新文章">创建新文章</h3>
+<p>假设项目文件夹的路径为<code>&lt;root&gt;</code>，<strong>即从gitee(github)上clone/pull下来的repo文件夹</strong>
+你可以执行下列命令来创建一篇新文章（新的页面） <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;root&gt;</span><br><span class="line">$ hexo new &lt;title&gt;</span><br></pre></td></tr></table></figure> 其中
+<code>&lt;title&gt;</code>
+为文章的标题，注意如果标题存在空格则需要使用<strong>引号“</strong>包括起来
+运行该命令，在<code>&lt;root&gt;/source/_posts</code>下会自动生成一个<strong>markdown</strong>源文件<code>YYYY-MM-DD&lt;title&gt;.md</code>
+即可开始在该文件中使用<a
+target="_blank" rel="noopener" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown语法</a>编写文章
+### 指定类别（categories）
+在每一个<code>.md</code>文件的最开头，都有着如下类似的<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>
+当你通过<code>hexo new</code>命令生成新的文章时，按照模板，会产生携带如下开头的<code>.md</code>文件
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何贡献一篇文章?</span><br><span class="line">comments: false</span><br><span class="line">date: 2022-07-12 14:30:12</span><br><span class="line">authorId: </span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+其中<code>categories</code>标签是用来指定文章所属的类别的（注意<code>:</code>后面由一个空格），目前支持的第一大类别有</p>
+<ul>
+<li>知识</li>
+<li>工具</li>
+<li>资源</li>
+</ul>
+<p>请在发布文章之前确认其所属的<code>categories</code>标签被正确的指定为了上述三种之一，否则文章可能不会被正常显示在网页上
+如果正确配置了文章的类别，那么这篇文章就会出现在通过点击导航栏对应类别出现的页面中
+<img src="1.png" /></p>
+<h3 id="署名">署名</h3>
+<p>同样是在<code>.md</code>文件的最开头的<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>中
+通过指定<code>authorId</code>标签为你名字的缩写，即可完成署名，例如
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何贡献一篇文章?</span><br><span class="line">comments: false</span><br><span class="line">date: 2022-07-12 14:30:12</span><br><span class="line">authorId: XGJ</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure> 则在生成发布该文章后，即可完成署名，类似如下的效果: <img
+src="2.png" /></p>
+<h3 id="插入图片">插入图片</h3>
+<p>优化了两种比较方便的嵌入图片的方式 - 通过typora+图床的方式实现 在
+typora-设置-图像
+中可以配置上传服务，当配置了上传服务后，每当向typora中粘贴图片时，图片也会被同步上传到一个云端的数据库中，并且生成一个url地址，由于这个地址在云端，因此可以直接将typora中的源代码复制到新文章的源文件中，图片可以正常访问
+<img src="3.png" /> - 通过直接向repo中传入图片的方式实现
+当你通过<code>hexo new</code>命令生成新的文章时，在<code>&lt;root&gt;/source/_posts</code>下会生成一个与<code>.md</code>文件同名的目录，将
+图片复制到这个目录中，即可通过间接路径访问它
+例如我需要嵌入入一张图片<code>logo.png</code>到文章<code>test工具</code>中
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;root&gt;/source/_posts/2022-07-12test工具</span><br><span class="line"><span class="built_in">cp</span> &lt;path_to_logo.png&gt; ./</span><br></pre></td></tr></table></figure> 然后可以在2022-07-12test工具.md中直接以以下方式嵌入图片:
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">logo.png</span>)</span><br></pre></td></tr></table></figure>
+同时，如果想要自定义图片格式，可以使用html语法，markdown天生兼容</p>
+<h2 id="部署发布">4. 部署发布</h2>
+<p>首先保证本地可以提交代码到gitee -
+已经添加了本地的ssh共钥到账户gitee设置</p>
+<p>参考<a
+target="_blank" rel="noopener" href="https://gitee.com/help/articles/4181#article-header0">配置好账户/仓库的SSH公钥</a></p>
+<ul>
+<li>账户已经加入到<strong>dsis_scss</strong>小组中，有对<strong>knowledge_base_page.git</strong>这个仓库的<strong>commit</strong>权限</li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
