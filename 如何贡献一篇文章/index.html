@@ -9,17 +9,21 @@
         <meta name="keywords" content="智能缓存&amp;资源调度组" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="如何贡献一篇文章? 1. 安装hexo静态博客生成工具 根据官方指引文档进行安装 2. clone知识库源文件到本地 知识库采用双repo备份的形式，你可以clone其中任意一个到本地，但注意只有gitee中的会在pus之后完成自动部署，所以建议全程使用gitee操作 gitee repo: https:&#x2F;&#x2F;gitee.com&#x2F;dsis_scss&#x2F;knowledge_base_page githu">
+    <meta name="description" content="如何贡献一篇文章? 1. 安装hexo静态博客生成工具 根据官方指引文档进行安装，注意node js的版本最好为16.x 2. clone知识库源文件到本地 知识库采用源文件和站点文件分离的形式，均存放于github中DSIS-SCSS组织账户的仓库中，需要添加&#x2F;修改文章时，只需要对源文件仓库进行操作，实际上源文件仓库即是一个hexo构建环境，可以直接在其中利用相关命令进行操作，如果你已经安装了h">
 <meta property="og:type" content="website">
 <meta property="og:title" content="智能缓存&amp;资源调度组">
 <meta property="og:url" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="智能缓存&amp;资源调度组">
-<meta property="og:description" content="如何贡献一篇文章? 1. 安装hexo静态博客生成工具 根据官方指引文档进行安装 2. clone知识库源文件到本地 知识库采用双repo备份的形式，你可以clone其中任意一个到本地，但注意只有gitee中的会在pus之后完成自动部署，所以建议全程使用gitee操作 gitee repo: https:&#x2F;&#x2F;gitee.com&#x2F;dsis_scss&#x2F;knowledge_base_page githu">
+<meta property="og:description" content="如何贡献一篇文章? 1. 安装hexo静态博客生成工具 根据官方指引文档进行安装，注意node js的版本最好为16.x 2. clone知识库源文件到本地 知识库采用源文件和站点文件分离的形式，均存放于github中DSIS-SCSS组织账户的仓库中，需要添加&#x2F;修改文章时，只需要对源文件仓库进行操作，实际上源文件仓库即是一个hexo构建环境，可以直接在其中利用相关命令进行操作，如果你已经安装了h">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/1.png">
+<meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/4.png">
 <meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/3.png">
+<meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/5.jpeg">
+<meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/5.jpeg">
+<meta property="og:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/6.png">
 <meta property="article:published_time" content="2022-07-12T06:30:12.000Z">
-<meta property="article:modified_time" content="2022-07-28T05:58:52.675Z">
+<meta property="article:modified_time" content="2022-07-28T08:01:20.700Z">
 <meta property="article:author" content="DSIS_SCSS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dsis-scss.github.io/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/1.png">
@@ -316,41 +320,63 @@
 <h2 id="安装hexo静态博客生成工具">1. 安装<a
 target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>静态博客生成工具</h2>
 <p>根据<a
-target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方指引文档</a>进行安装</p>
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方指引文档</a>进行安装，注意node
+js的版本最好为16.x</p>
 <h2 id="clone知识库源文件到本地">2. clone知识库源文件到本地</h2>
-<p>知识库采用双repo备份的形式，你可以clone其中任意一个到本地，但注意只有gitee中的会在pus之后完成自动部署，所以建议全程使用gitee操作
-gitee repo: <a
-target="_blank" rel="noopener" href="https://gitee.com/dsis_scss/knowledge_base_page">https://gitee.com/dsis_scss/knowledge_base_page</a>
-github repo: <a href=""></a> 例如： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitee.com/dsis_scss/knowledge_base_page.git</span><br></pre></td></tr></table></figure></p>
+<p>知识库采用源文件和站点文件分离的形式，均存放于github中<a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS">DSIS-SCSS</a>组织账户的仓库中，需要添加/修改文章时，只需要对<strong>源文件</strong>仓库进行操作，实际上源文件仓库即是一个<strong>hexo构建环境</strong>，可以直接在其中利用相关命令进行操作，如果你已经安装了<code>hexo</code>，并且对其感兴趣的话，可以参考<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">hexo命令</a>，当然如果只是贡献文章，是不需要了解这些命令的。</p>
+<ul>
+<li>源文件仓库: <a
+target="_blank" rel="noopener" href="https://gitee.com/dsis_scss/knowledge_base_page">https://github.com/DSIS-SCSS/dsis-scss-source</a></li>
+<li>站点仓库: <a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS/dsis-scss.github.io">https://github.com/DSIS-SCSS/dsis-scss.github.io</a></li>
+</ul>
+<p>将源文件仓库clone到本地： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/DSIS-SCSS/dsis-scss-source.git</span><br></pre></td></tr></table></figure>
+<em>*注意这个仓库是private的，在clone之前请保证已经<a
+target="_blank" rel="noopener" href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh">配置好本地连接github的ssh</a>，并且个人github账号已经<a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS">加入到组织账户</a>中，否则可能无法正常查看到<strong>源文件</strong>仓库(404)</em></p>
+<h2 id="本地运行">3. 本地运行</h2>
+<p>假设项目文件夹的路径为<code>&lt;root&gt;</code>，<strong>即从github上clone/pull下来的repo文件夹</strong>
+如果已经安装了<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>，并且成功clone下来了<strong>源文件</strong>仓库，那么可以执行以下指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;root&gt;</span><br><span class="line">$ node --version <span class="comment"># must be newer than 16.0</span></span><br><span class="line">$ npm i <span class="comment"># npm install</span></span><br></pre></td></tr></table></figure>
+<ol type="1">
+<li><p>首先安装npm依赖包，依赖包meta位于<root>package.json中，不要随意修改</p></li>
+<li><p>由于需要渲染<code>latex</code>公式，因此需要<a
+target="_blank" rel="noopener" href="https://github.com/jgm/pandoc">pandoc</a>环境，可以于<a
+target="_blank" rel="noopener" href="https://github.com/jgm/pandoc/releases/">https://github.com/jgm/pandoc/releases/</a>下载安装</p></li>
+<li><p>可以执行以下命令在本地启动hexo服务，成功执行后，在<a
+target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>即可访问站点</p></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g <span class="comment"># hexo generate，生成静态博客页面，输出到public文件夹</span></span><br><span class="line">$ hexo s <span class="comment"># hexo server，启动服务</span></span><br></pre></td></tr></table></figure>
+<p>在4000端口运行的服务是一个<strong>持续监听</strong>服务，成功启动后，如果对文件进行修改（文章/配置）并保存，则会实时呈现到浏览器中，不需要手动重新构建</p>
 <h2 id="写作">3. 写作</h2>
 <h3 id="创建新文章">创建新文章</h3>
-<p>假设项目文件夹的路径为<code>&lt;root&gt;</code>，<strong>即从gitee(github)上clone/pull下来的repo文件夹</strong>
+<p>假设项目文件夹的路径为<code>&lt;root&gt;</code>，<strong>即从github上clone/pull下来的源文件仓库</strong>
 你可以执行下列命令来创建一篇新文章（新的页面） <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;root&gt;</span><br><span class="line">$ hexo new &lt;title&gt;</span><br></pre></td></tr></table></figure> 其中
 <code>&lt;title&gt;</code>
 为文章的标题，注意如果标题存在空格则需要使用<strong>引号“</strong>包括起来
 运行该命令，在<code>&lt;root&gt;/source/_posts</code>下会自动生成一个<strong>markdown</strong>源文件<code>YYYY-MM-DD&lt;title&gt;.md</code>
 即可开始在该文件中使用<a
-target="_blank" rel="noopener" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown语法</a>编写文章
-### 指定类别（categories）
-在每一个<code>.md</code>文件的最开头，都有着如下类似的<a
+target="_blank" rel="noopener" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown语法</a>编写文章</p>
+<h4 id="指定类别categories">指定类别（categories）</h4>
+<p>在每一个<code>.md</code>文件的最开头，都有着如下类似的<a
 target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>
-当你通过<code>hexo new</code>命令生成新的文章时，按照模板，会产生携带如下开头的<code>.md</code>文件
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何贡献一篇文章?</span><br><span class="line">comments: false</span><br><span class="line">date: 2022-07-12 14:30:12</span><br><span class="line">authorId: </span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-其中<code>categories</code>标签是用来指定文章所属的类别的（注意<code>:</code>后面由一个空格），目前支持的第一大类别有</p>
+当你通过<code>hexo new</code>命令生成新的文章时，按照模板，会产生携带如下开头的<code>.md</code>文件</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">toc: true</span><br><span class="line">tags: </span><br><span class="line"><span class="section">categories: </span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>categories</code>标签是用来指定文章所属的类别的（注意<code>:</code>后面有一个空格），目前支持的第一大类别有</p>
 <ul>
 <li>知识</li>
 <li>工具</li>
 <li>资源</li>
 </ul>
 <p>请在发布文章之前确认其所属的<code>categories</code>标签被正确的指定为了上述三种之一，否则文章可能不会被正常显示在网页上
-如果正确配置了文章的类别，那么这篇文章就会出现在通过点击导航栏对应类别出现的页面中
-<img src="1.png" /></p>
-<h3 id="署名">署名</h3>
-<p>同样是在<code>.md</code>文件的最开头的<a
-target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>中
-通过指定<code>authorId</code>标签为你名字的缩写，即可完成署名，例如
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何贡献一篇文章?</span><br><span class="line">comments: false</span><br><span class="line">date: 2022-07-12 14:30:12</span><br><span class="line">authorId: XGJ</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure> 则在生成发布该文章后，即可完成署名，类似如下的效果: <img
-src="2.png" /></p>
+如果正确配置了文章的类别，那么这篇文章就会出现在对应的侧边栏的树形目录中</p>
+<p><img src="1.png" /></p>
+<p>同时，侧边栏的树形目录支持<strong>多级</strong><code>categories</code>指定，例如，在Front-matter中如下指定，即可实现多级目录</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: test工具</span><br><span class="line">date: 2022-07-27 17:02:19</span><br><span class="line">tags:</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">    -</span> 工具</span><br><span class="line"><span class="section">    - 科研软件</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+<p><img src="4.png" /></p>
 <h3 id="插入图片">插入图片</h3>
 <p>优化了两种比较方便的嵌入图片的方式 - 通过typora+图床的方式实现 在
 typora-设置-图像
@@ -359,17 +385,38 @@ typora-设置-图像
 当你通过<code>hexo new</code>命令生成新的文章时，在<code>&lt;root&gt;/source/_posts</code>下会生成一个与<code>.md</code>文件同名的目录，将
 图片复制到这个目录中，即可通过间接路径访问它
 例如我需要嵌入入一张图片<code>logo.png</code>到文章<code>test工具</code>中
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;root&gt;/source/_posts/2022-07-12test工具</span><br><span class="line"><span class="built_in">cp</span> &lt;path_to_logo.png&gt; ./</span><br></pre></td></tr></table></figure> 然后可以在2022-07-12test工具.md中直接以以下方式嵌入图片:
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;root&gt;/source/_posts/test工具</span><br><span class="line"><span class="built_in">cp</span> &lt;path_to_logo.png&gt; ./</span><br></pre></td></tr></table></figure> 然后可以在2022-07-12test工具.md中直接以以下方式嵌入图片:
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">logo.png</span>)</span><br></pre></td></tr></table></figure>
-同时，如果想要自定义图片格式，可以使用html语法，markdown天生兼容</p>
+同时，如果想要自定义图片格式，可以使用html语法，markdown天生兼容
+例如需要完成一张图片的缩放/居左</p>
+<p>直接使用markdown</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">5.jpeg</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="5.jpeg" /></p>
+<p>使用html完成缩放 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;5.jpeg&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">width</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">height</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">     /&gt;</span></span><br></pre></td></tr></table></figure> <img src="5.jpeg"
+     width="100"
+     height="100"
+     ></p>
 <h2 id="部署发布">4. 部署发布</h2>
-<p>首先保证本地可以提交代码到gitee -
-已经添加了本地的ssh共钥到账户gitee设置</p>
-<p>参考<a
-target="_blank" rel="noopener" href="https://gitee.com/help/articles/4181#article-header0">配置好账户/仓库的SSH公钥</a></p>
+<p>在本地完成写作，在本地hexo服务中调试没有格式问题后，可以push<strong>源文件</strong>仓库到github中</p>
+<p>首先保证本地可以提交代码到github</p>
 <ul>
-<li>账户已经加入到<strong>dsis_scss</strong>小组中，有对<strong>knowledge_base_page.git</strong>这个仓库的<strong>commit</strong>权限</li>
+<li><p>已经添加了本地的ssh公钥到账户github设置</p>
+<p>参考<a
+target="_blank" rel="noopener" href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh">配置好本地连接github的ssh</a></p></li>
+<li><p>账户已经加入到<a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS">DSIS-SCSS</a>小组中，有对<a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS/dsis-scss-source">dsis-scss-source</a>这个仓库的<strong>commit</strong>权限</p></li>
 </ul>
+<p>然后只需要简单的在本地完成修改后，add/commit/push即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;root&gt;</span><br><span class="line">$ git remote add origin https://github.com/DSIS-SCSS/dsis-scss-source.git</span><br><span class="line">$ git pull</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">&quot;add a post&quot;</span></span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<p>这个源文件仓库实现了<a
+target="_blank" rel="noopener" href="https://github.com/features/actions">Github Action CI</a>，在向<a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS/dsis-scss-source">dsis-scss-source</a>push后，会自动在云端实现<code>hexo generate</code>、<code>hexo deploy</code>等操作，将生成的<code>public</code>文件夹push到站点仓库<a
+target="_blank" rel="noopener" href="https://github.com/DSIS-SCSS/dsis-scss.github.io">dsis-scss.github.io</a></p>
+<p>自动化部署的log和结果可以在仓库-Action中看到</p>
+<p><img src="6.png" /></p>
+<p>部署成功后，即可访问<a
+href="https://dsis-scss.github.io/">https://dsis-scss.github.io/</a>，观察线上效果</p>
 
             </div>
         
