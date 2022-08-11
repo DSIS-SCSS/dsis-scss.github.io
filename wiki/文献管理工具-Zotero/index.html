@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>文献管理工具-Zotero | 智能缓存&amp;资源调度组</title>
+    
+    
+        <meta name="keywords" content="文献管理工具-Zotero" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Zotero介绍 官方网站：Zotero | Your personal research assistant  Zotero是一个免费软件，可以帮助你进行文献的收集、整理、注释和引用。 Zotero具有较高的自由度，有许多插件可供选择。   下载与安装 本体  可在Zotero官网下载安装包 运行安装包，选择安装位置即可  浏览器插件-Zotero Connector  Zotero Conne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文献管理工具-Zotero">
+<meta property="og:url" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/index.html">
+<meta property="og:site_name" content="智能缓存&amp;资源调度组">
+<meta property="og:description" content="Zotero介绍 官方网站：Zotero | Your personal research assistant  Zotero是一个免费软件，可以帮助你进行文献的收集、整理、注释和引用。 Zotero具有较高的自由度，有许多插件可供选择。   下载与安装 本体  可在Zotero官网下载安装包 运行安装包，选择安装位置即可  浏览器插件-Zotero Connector  Zotero Conne">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-10-10-41-42-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-16-07-32-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-15-56-52-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-15-59-56-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-16-01-50-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-16-11-54-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-16-17-46-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-10-20-42-26-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-10-20-45-44-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-16-56-27-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-17-27-00-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-17-31-53-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-17-36-05-image.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-11-17-37-06-image.png">
+<meta property="article:published_time" content="2022-08-10T01:15:57.000Z">
+<meta property="article:modified_time" content="2022-08-11T10:01:43.775Z">
+<meta property="article:author" content="DSIS_SCSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dsis-scss.github.io/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/2022-08-10-10-41-42-image.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="智能缓存&amp;资源调度组" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">智能缓存&amp;资源调度组</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a>
+                
+                    <a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a>
+                
+                    <a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            知识
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            体系结构(System)
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%85%A5%E9%97%A8/">分布式系统入门(MIT 6.824)</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            论文
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/">时序预测论文整理</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            资源
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            书目
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/DDIA-%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8/">DDIA-设计数据密集型应用</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            工具
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            科研软件
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/test%E5%B7%A5%E5%85%B7/">test工具</a></li>  <li class="file active"><a href="/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/">文献管理工具-Zotero</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/Anaconda-jupyter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">Anaconda&Jupyter快速上手</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>链接</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://wnlo.hust.edu.cn/">华中科技大学武汉光电国家研究中心官网</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://idsm.wnlo.hust.edu.cn/index.htm">智能数据存储与管理实验室主页</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-文献管理工具-Zotero" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/tools/">工具</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tools/%E7%A7%91%E7%A0%94%E8%BD%AF%E4%BB%B6/">科研软件</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/">
+            <time datetime="2022-08-10T01:15:57.000Z" itemprop="datePublished">2022-08-10</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            文献管理工具-Zotero
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#zotero%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">Zotero介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">下载与安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text">本体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6-zotero-connector"><span class="toc-number">2.2.</span> <span class="toc-text">浏览器插件-Zotero Connector</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6"><span class="toc-number">2.3.1.</span> <span class="toc-text">推荐插件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%90%8C%E6%AD%A5"><span class="toc-number">3.1.</span> <span class="toc-text">在线同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf%E4%B8%8B%E8%BD%BD-sci-hub"><span class="toc-number">3.2.</span> <span class="toc-text">PDF下载-sci-hub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zotfile"><span class="toc-number">3.3.</span> <span class="toc-text">ZotFile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8C%89%E8%8E%89%E8%8A%B1"><span class="toc-number">3.4.</span> <span class="toc-text">茉莉花</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">使用实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">参考链接</span></a></li></ol>
+                </div>
+            
+        
+        
+            <h2 id="zotero介绍">Zotero介绍</h2>
+<p>官方网站：<a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero | Your personal
+research assistant</a></p>
+<blockquote>
+<p>Zotero是一个免费软件，可以帮助你进行文献的收集、整理、注释和引用。</p>
+<p>Zotero具有较高的自由度，有许多插件可供选择。</p>
+</blockquote>
+<p><img title="" src="2022-08-10-10-41-42-image.png" alt="" data-align="center" width="600"></p>
+<h2 id="下载与安装">下载与安装</h2>
+<h3 id="本体">本体</h3>
+<ol type="1">
+<li><p>可在<a
+target="_blank" rel="noopener" href="https://www.zotero.org/download/">Zotero官网</a>下载安装包</p></li>
+<li><p>运行安装包，选择安装位置即可</p></li>
+</ol>
+<h3 id="浏览器插件-zotero-connector">浏览器插件-Zotero Connector</h3>
+<ol type="1">
+<li><p>Zotero
+Connector可以从网页中抓取文献和元数据，将其保存到本地。只有Zotero运行时Zotero
+Connector才能使用。</p></li>
+<li><p>Zotero Connector支持Edge、Chrome、火狐、Safari浏览器</p></li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zotero.org/download/">Zotero
+Connector下载链接</a></p></li>
+<li><p>Edge、Chrome插件可在对应浏览器的插件引用市场获取</p></li>
+<li><p>火狐、Safari的插件安装方法可参考下载页面</p></li>
+</ol>
+<h3 id="插件">插件</h3>
+<ol type="1">
+<li><p>打开【Zotero】</p></li>
+<li><p>点击【工具】—【插件】</p></li>
+<li><p>将需要安装的插件【拖动】至该页面</p></li>
+<li><p>安装完毕后重启【Zotero】</p></li>
+</ol>
+<h4 id="推荐插件">推荐插件</h4>
+<ul>
+<li><p>ZotFile：自动修改附件名、添加附件</p>
+<ul>
+<li><p>官方网站：<a target="_blank" rel="noopener" href="http://zotfile.com/">ZotFile - Advanced PDF
+management for Zotero</a></p></li>
+<li><p>Github仓库：<a
+target="_blank" rel="noopener" href="https://github.com/jlegewie/zotfile">jlegewie/zotfile: Zotero
+plugin to manage your attachments</a></p></li>
+</ul></li>
+<li><p>茉莉花：抓取中文网站元数据</p>
+<ul>
+<li>GIthub仓库：<a
+target="_blank" rel="noopener" href="https://github.com/l0o0/jasminum">l0o0/jasminum: A Zotero add-on
+to retrive CNKI meta data</a></li>
+</ul></li>
+</ul>
+<h2 id="配置">配置</h2>
+<h3 id="在线同步">在线同步</h3>
+<ol type="1">
+<li><p>打开【Zotero】—【编辑】—【首选项】—【同步】</p></li>
+<li><p>在【数据同步】栏创建并登录Zotero账号<img src="2022-08-11-16-07-32-image.png" title="" alt="" width="600"></p></li>
+<li><p>在【文件同步】栏，可以使用Zotero文件同步服务的300MB免费空间，也可以使用支持WebDAV的云盘，这里使用坚果云为例，坚果云免费账号每月提供1GB上传流量和3GB下载流量，足够用于文献同步</p></li>
+<li><p>进入<a
+target="_blank" rel="noopener" href="https://www.jianguoyun.com/">坚果云官网</a>，创建并登陆账号，进入【账户信息】—【安全选项】<img src="2022-08-11-15-56-52-image.png" title="" alt="" width="600"><img src="2022-08-11-15-59-56-image.png" title="" alt="" width="600"></p></li>
+<li><p>点击添加应用，输入名称（如Zotero），点击生成密码<img src="2022-08-11-16-01-50-image.png" title="" alt="" width="600"></p></li>
+<li><p>将服务器地址、账户、密码复制入【Zotero】设置界面的【文件同步】栏<img src="2022-08-11-16-11-54-image.png" title="" alt="" width="600"><img src="2022-08-11-16-17-46-image.png" title="" alt="" width="600"></p></li>
+</ol>
+<h3 id="pdf下载-sci-hub">PDF下载-sci-hub</h3>
+<ol type="1">
+<li><p>打开【Zotero】—【编辑】—【首选项】—【高级】—【常规】—【设置编辑器】</p></li>
+<li><p>接受风险，搜索找到【extensions.zotero.findPDFs.resolvers】</p></li>
+<li><p>双击编辑，将默认的<code>[]</code>替换为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;:&quot;Sci-Hub&quot;,</span><br><span class="line">  &quot;method&quot;:&quot;GET&quot;,</span><br><span class="line">  &quot;url&quot;:&quot;https://sci-hub.hkvisa.net/&#123;doi&#125;&quot;,</span><br><span class="line">  &quot;mode&quot;:&quot;html&quot;,</span><br><span class="line">  &quot;selector&quot;:&quot;#pdf&quot;,</span><br><span class="line">  &quot;attribute&quot;:&quot;src&quot;,</span><br><span class="line">  &quot;automatic&quot;:true </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中【https://sci-hub.hkvisa.net】为可用的sci-hub链接</p></li>
+<li><p>设置完成后可通过ISBN、DOI等下载PDF<img src="2022-08-10-20-42-26-image.png" title="" alt="" width="600"></p></li>
+<li><p>也可以在Zotero
+Connector无法抓取PDF时，右键点击条目手动下载PDF<img src="2022-08-10-20-45-44-image.png" title="" alt="" width="600"></p></li>
+</ol>
+<h3 id="zotfile">ZotFile</h3>
+<ol type="1">
+<li><p>进入【Zotero】—【工具】—【ZotFile Preferences…】</p></li>
+<li><p>【General
+Settings】设置更加方便的向条目中添加附件，但个人感觉实用性不强，设置可参考文末的参考链接<a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/347493385">Zotero：科研小白的第一款文献管理软件
+- 知乎 (zhihu.com)</a></p></li>
+<li><p>【Tablet
+Settings】设置与云盘的同步，并实现跨平台同步，设置方法同样参考文末链接<a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/347493385">Zotero：科研小白的第一款文献管理软件
+- 知乎 (zhihu.com)</a></p></li>
+<li><p>【Renaming
+Rules】设置通过规则语句对PDF、DOC等文件进行重命名，规则语句的编写格式参考<a
+target="_blank" rel="noopener" href="http://zotfile.com/index.html#renaming-rules">ZotFile的说明</a></p></li>
+<li><p>【Advanced Settings】对重命名进行进阶设置，可以不动</p></li>
+</ol>
+<h3 id="茉莉花">茉莉花</h3>
+<ol type="1">
+<li>还没用过，待补充</li>
+</ol>
+<h2 id="使用实例">使用实例</h2>
+<ol type="1">
+<li><p>在网页中找到需要的文献，点击【Zotero
+Connector】，可在弹出的页面将本文献的条目归档至某文件夹，并添加tag。这里将文献归档至【TEST】文件夹并添加tag【00】代表未读<img src="2022-08-11-16-56-27-image.png" title="" alt="" width="600"></p></li>
+<li><p>可以看到我们刚刚添加的文献，两个文件分别是文献的PDF和网页快照，双击即可打开，此外可在右侧设置文献条目的信息<img src="2022-08-11-17-27-00-image.png" title="" alt="" width="600"></p></li>
+<li><p>在阅读文献的过程中做的笔记以及其他相关资料，可以以【附件】的形式添加到文献条目中<img src="2022-08-11-17-31-53-image.png" title="" alt="" width="600"></p></li>
+<li><p>左下角的展示的是文献的tag，可以通过指派颜色管理常用的tag，如已读、未读等，右键点击代表已读的tag【Read】，选择指派颜色，即可将其设置为蓝色，快捷键设为【2】，之后就可以通过键盘【2】快速更改条目的阅读状态<img src="2022-08-11-17-36-05-image.png" title="" alt="" width="600"><img src="2022-08-11-17-37-06-image.png" title="" alt="" width="300"></p></li>
+</ol>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero | Your personal research
+assistant</a></p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/347493385">Zotero：科研小白的第一款文献管理软件
+- 知乎 (zhihu.com)</a></p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://www.jianguoyun.com/">坚果云官网|网盘|云盘|云服务|团队协作软件|同步盘
+(jianguoyun.com)</a></p></li>
+<li><p><a target="_blank" rel="noopener" href="http://zotfile.com/index.html">ZotFile - Advanced PDF
+management for Zotero</a></p></li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/l0o0/jasminum">l0o0/jasminum: A
+Zotero add-on to retrive CNKI meta data. 一个简单的Zotero
+插件，用于识别中文元数据 (github.com)</a></p></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/Anaconda-jupyter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Anaconda&amp;Jupyter快速上手
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">时序预测论文整理</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
