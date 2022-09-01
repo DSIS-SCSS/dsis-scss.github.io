@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>VSCode 快速上手 | 智能缓存&amp;资源调度组</title>
+    
+    
+        <meta name="keywords" content="VSCode 快速上手" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="先善其事必先利其器，使用一款好的编译器对于我们工作学习来说是至关重要的。不论你使用的是 Windows 、Mac OS 还是 Linux，我们都推荐使用 VS code(Visual Studio code) 编辑器。它是微软开发的一款开源跨平台编辑器，几乎在任何系统(甚至网页上)编辑任何语言的代码。得益于其活跃的社区，VS code 拥有非常丰富的插件，这些插件也使得我们编码体验变得更加友好。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VSCode 快速上手">
+<meta property="og:url" content="https://dsis-scss.github.io/wiki/vscode/index.html">
+<meta property="og:site_name" content="智能缓存&amp;资源调度组">
+<meta property="og:description" content="先善其事必先利其器，使用一款好的编译器对于我们工作学习来说是至关重要的。不论你使用的是 Windows 、Mac OS 还是 Linux，我们都推荐使用 VS code(Visual Studio code) 编辑器。它是微软开发的一款开源跨平台编辑器，几乎在任何系统(甚至网页上)编辑任何语言的代码。得益于其活跃的社区，VS code 拥有非常丰富的插件，这些插件也使得我们编码体验变得更加友好。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/1_download.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/2_download_config.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/3_gcc_config.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/4_env_config.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/5_env_config.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/6_env_test.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/7_install_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/8_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/9_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/10_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/11_coderunner_setting.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/12_coderunner_setting.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/13_testrun.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/14_testrun.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/15_config_debug.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/16_config_debug.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/17_config_debug.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/18_config_debug.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/19_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/20_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/21_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/22_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/23_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/25_plugin.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/vscode/24_plugin.png">
+<meta property="article:published_time" content="2022-08-27T11:23:05.000Z">
+<meta property="article:modified_time" content="2022-09-01T08:39:19.356Z">
+<meta property="article:author" content="DSIS_SCSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dsis-scss.github.io/wiki/vscode/1_download.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="智能缓存&amp;资源调度组" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">智能缓存&amp;资源调度组</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a>
+                
+                    <a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a>
+                
+                    <a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            知识
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            体系结构(System)
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%85%A5%E9%97%A8/">分布式系统入门(MIT 6.824)</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            机器学习
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">机器学习学习笔记（持续更新）</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            论文
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/">时序预测论文整理</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            资源
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            书目
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/DDIA-%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8/">DDIA-设计数据密集型应用</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            工具
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            科研软件
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/test%E5%B7%A5%E5%85%B7/">test工具</a></li>  <li class="file"><a href="/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/">文献管理工具-Zotero</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/Anaconda-jupyter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">Anaconda&Jupyter快速上手</a></li>  <li class="file active"><a href="/wiki/vscode/">VSCode 快速上手</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>链接</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://wnlo.hust.edu.cn/">华中科技大学武汉光电国家研究中心官网</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://idsm.wnlo.hust.edu.cn/index.htm">智能数据存储与管理实验室主页</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-vscode" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/tools/">工具</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/vscode/">
+            <time datetime="2022-08-27T11:23:05.000Z" itemprop="datePublished">2022-08-27</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            VSCode 快速上手
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-c-%E8%B0%83%E8%AF%95%E8%BF%90%E8%A1%8C"><span class="toc-number">2.</span> <span class="toc-text">配置 C++ 调试运行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-c-%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">2.1.</span> <span class="toc-text">安装 C++ 运行环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-vs-code-%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">2.2.</span> <span class="toc-text">配置 VS Code 运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-number">2.2.1.</span> <span class="toc-text">安装插件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E8%BF%90%E8%A1%8C"><span class="toc-number">2.3.</span> <span class="toc-text">测试运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E8%BF%90%E8%A1%8C"><span class="toc-number">2.4.</span> <span class="toc-text">调试运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">3.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#material-icon-theme"><span class="toc-number">3.1.1.</span> <span class="toc-text">Material Icon Theme</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#community-material-theme"><span class="toc-number">3.1.2.</span> <span class="toc-text">Community Material Theme</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#indent-rainbow"><span class="toc-number">3.1.3.</span> <span class="toc-text">indent-rainbow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bracket-pair-colorizer-2"><span class="toc-number">3.1.4.</span> <span class="toc-text">Bracket Pair Colorizer 2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python"><span class="toc-number">3.2.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#go"><span class="toc-number">3.3.</span> <span class="toc-text">Go</span></a></li></ol></li></ol>
+                </div>
+            
+        
+        
+            <p>先善其事必先利其器，使用一款好的编译器对于我们工作学习来说是至关重要的。不论你使用的是
+Windows 、Mac OS 还是 Linux，我们都推荐使用 VS code(Visual Studio code)
+编辑器。它是微软开发的一款开源跨平台编辑器，几乎在任何系统(甚至网页上)编辑任何语言的代码。得益于其活跃的社区，VS
+code 拥有非常丰富的插件，这些插件也使得我们编码体验变得更加友好。</p>
+<h2 id="安装">安装</h2>
+<p>进入官网<a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">下载</a></p>
+<p><img title="" src="1_download.png" alt="" data-align="center" width="700"></p>
+<p>点击下载 User 的 64 bit 版本。</p>
+<p><strong>后序安装中，下图中的两个选项都勾选上，这样后面可以直接通过文件夹打开
+vs code：</strong></p>
+<p><img title="" src="2_download_config.png" alt="" data-align="center" width="500"></p>
+<h2 id="配置-c-调试运行">配置 C++ 调试运行</h2>
+<h3 id="安装-c-运行环境">安装 C++ 运行环境</h3>
+<p>C++ 有很多编辑器，Clang、GNU C++、MSVC等等。我们这里安装 GNU C++，在
+Windows 中，直接安装 MinGW（Minimalist GNU on Windows）即可。如果你是
+MacOS 用户，可以通过安装 <a
+target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018045211">Command Line
+Toools</a> 来进行配置。</p>
+<p>MinGW 推荐到 <a
+target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/">SourceForge</a>
+进行下载, 选择 8.1.0 版本的 x86_64-posix-seh
+资源包文件（64位操作系统，启用 C++ 11
+多线程特性等）。另外，如果想要使用最新版 GCC-11.2（支持 C++
+20，但对某些机型可能不适配，谨慎使用），可以到这里<a
+target="_blank" rel="noopener" href="https://pan.baidu.com/s/1JwOvWrUV4bSrP63fd8A3vA?pwd=bjvi">下载</a>。</p>
+<p>下载完成之后，直接拷贝到 G
+盘（或其他盘，根据自己情况来调整）根目录下，然后将下图中的路径（g++.exe所在目录路径）复制到剪贴板：</p>
+<p><img title="" src="3_gcc_config.png" alt="" data-align="center" width="600"></p>
+<p>注意，图中的 MinGW 安装在 G 盘，你需要找到你的 MinGW 路径，打开其中的
+bin 文件夹，复制其路径即可。 然后，将复制的路径追加到 path
+环境变量中，示意图如下：</p>
+<p><img title="" src="4_env_config.png" alt="" data-align="center" width="400"></p>
+<p><img title="" src="5_env_config.png" alt="" data-align="center" width="1200"></p>
+<ul>
+<li>如果你在上面的过程中遇到了问题，可以参考该链接中提供的方法：https://new.qq.com/omn/20211202/20211202A08CCW00.html</li>
+<li>如果你是 win7
+用户，同样可以通过百度来找到对应的修改办法，但要特别注意追加环境变量时的逗号分隔符是英文。</li>
+</ul>
+<p>配置环境变量是为了在其他地方都可以用到 bin 目录下的 exe 文件（例如
+g++.exe）。</p>
+<p>你可通过以下方式检验是否安装成功：</p>
+<p><img title="" src="6_env_test.png" alt="" data-align="center" width="600"></p>
+<p>如果你测试的结果与上面的不同，说明环境变量配置失败了，需要重新检查一下前面的步骤，如果实在不行，不妨重启一下电脑试试。</p>
+<h3 id="配置-vs-code-运行环境">配置 VS Code 运行环境</h3>
+<p>到了最复杂的一步，由于 VS Code
+有着庞大的社区，各种各样的插件、配置会让你感觉到眼花缭乱。这里首先教大家如何在
+VS Code 中通过命令行终端（Terminal）中编译运行 C++
+代码，然后再配置如何实现单步调试功能。</p>
+<h4 id="安装插件">安装插件</h4>
+<p>在这一步，你需要用各种插件来丰富你的 VS Code。打开 VS
+Code，在左侧工具栏中寻找下图样式的按钮（不要在意按钮的顺序，因为图中已经安装了很多别的插件）
+然后在搜索框中输入对应的插件名，点击下载按钮即可。</p>
+<p><img title="" src="7_install_plugin.png" alt="" data-align="center" width="700"></p>
+<ol type="1">
+<li><p>汉化插件 Chinese
+<img title="" src="8_plugin.png" alt="" data-align="center" width="700"></p></li>
+<li><p>C/C++ 插件
+<img title="" src="9_plugin.png" alt="" data-align="center" width="700"></p></li>
+<li><p>Code Runner
+<img title="" src="10_plugin.png" alt="" data-align="center" width="700">
+安装完 Code Runner
+之后，我们点击右下角的设置按钮，进入「扩展设置」（或者通过右上角的「文件」-「首选项」-「设置」-「搜索框中输入
+Code Runner 进行查找」）。找到下图中的三项设置，勾上对钩。
+<img title="" src="11_coderunner_setting.png" alt="" data-align="center" width="700">
+然后找到下图中的设置项，点进去 settings.json，设置我们运行 C++
+时的编译命令
+<img title="" src="12_coderunner_setting.png" alt="" data-align="center" width="700">
+点击去之后，添加如下设置代码： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;code-runner.executorMap&quot;: &#123;</span><br><span class="line">        &quot;c&quot;: &quot;cd $dir &amp;&amp; gcc $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt&quot;,</span><br><span class="line">        &quot;cpp&quot;: &quot;cd $dir &amp;&amp; g++ $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt&quot;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 如果你发现点进去之后 VS
+Code 中已经生成了很多配置文档，不用担心，你只要确保其中有 C 和 C++
+的编译命令即可。</p>
+<p>这里简单解释一下
+<code>cd $dir &amp;&amp; g++ $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt</code>：<code>$dir</code>
+表示当前文件的所在目录，<code>cd</code> 会将终端的工作目录切换到
+<code>$dir</code> 下，然后对当前文件 <code>$fileName</code> 使用
+<code>g++</code> 进行编译，编译生成的文件名是
+<code>$fileNameWithoutExt</code>，然后紧接着直接通过命令
+<code>$dir$fileNameWithoutExt</code>运行编译好的文件。如果你不能完全理解我在说什么也没有关系，只要确保有这一条配置就可以了。</p></li>
+</ol>
+<h3 id="测试运行">测试运行</h3>
+<p>接下来我们测试运行 C++
+代码，首先我们需要在电脑中找一个地方创建一个空的文件夹用来存放代码（最好是空的），点击左上角的「文件」，然后点击「打开文件夹」，选择刚刚创建的文件夹。
+例如，我这里创建了一个名字为 CPP 的文件夹，点击按钮创建新的文件
+a.cpp。</p>
+<p><img title="" src="13_testrun.png" alt="" data-align="center" width="700"></p>
+<p>输入以下代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Hello world!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>点击 Run Code 运行（或者 Ctrl + Alt + N），可以看到下面的终端输出了
+<code>Hello World!</code>11 ，运行成功！</p>
+<p><img title="" src="14_testrun.png" alt="" data-align="center" width="700"></p>
+<p>到此为止，你可以通过 VS Code 来写单文件的 CPP
+代码了。（如果要是多文件的 CPP 项目，建议使用 MakeFile 来编译）</p>
+<h3 id="调试运行">调试运行</h3>
+<p>如果你不满足于终端运行，想要单步调试代码，该如何处理？
+也很简单，首先，你在 CPP 文件夹中创建一个名字为 .vscode
+的文件，注意前面的点不可以被忽略，它将被 VS Code
+视作配置文件。然后在里面创建两个文件：</p>
+<ol type="1">
+<li><p>launch.json 注意下面的第 15 行配置，它对应的是你 MinGW
+的安装环境，需要找到 bin 目录下的 gdb.exe
+文件。注意所有的文件分隔符都是用 <code>/</code> 而不是
+<code>\</code>，如果使用 <code>\</code> 还需要将其转义为
+<code>\\</code>。 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">     <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">         <span class="punctuation">&#123;</span></span><br><span class="line">         <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(gdb) Launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span> <span class="comment">// 调试目标文件</span></span><br><span class="line">         <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 指定调试传入参数，可自行修改</span></span><br><span class="line">         <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;cwd&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;G:/Program Files/mingw64/bin/gdb.exe&quot;</span><span class="punctuation">,</span> <span class="comment">// /path/to/gdb</span></span><br><span class="line">         <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">             <span class="punctuation">&#123;</span></span><br><span class="line">             <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Enable pretty-printing for gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">             <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">             <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">             <span class="punctuation">&#125;</span></span><br><span class="line">         <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">         <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build-g++&quot;</span> <span class="comment">// 每次调试前 - 都进行生成任务执行编译，保证调试的目标文件是最新的</span></span><br><span class="line">         <span class="punctuation">&#125;</span></span><br><span class="line">     <span class="punctuation">]</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>注意到启动调试 （launch）之前，我们配置了 build-g++，所以还需要一个
+tasks.json文件。</p></li>
+<li><p>tasks.json 以下内容不需要修改，直接复制粘贴即可。
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">     <span class="comment">// See https://go.microsoft.com/fwlink/?LinkId=733558</span></span><br><span class="line">     <span class="comment">// for the documentation about the tasks.json format</span></span><br><span class="line">     <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">         <span class="punctuation">&#123;</span></span><br><span class="line">             <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build-g++&quot;</span><span class="punctuation">,</span>                         <span class="comment">// 给当前的生成任务一个名字</span></span><br><span class="line">             <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">             <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++&quot;</span><span class="punctuation">,</span></span><br><span class="line">             <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>                                        <span class="comment">// 如果你以后对于编译参数有任何修改，就在这里修改。</span></span><br><span class="line">                 <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">                 <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasename&#125;&quot;</span><span class="punctuation">,</span>                           <span class="comment">// $&#123;fileBasenmae&#125; VS Code 内置变量: 当前活动文件的完整文件名 - helloworld.cpp</span></span><br><span class="line">                 <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">                 <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span>            <span class="comment">// $&#123;fileBasenameNoExtension&#125; 这个是 VS Code 内置变量: 当前活动文件的完整文件名舍去扩展名 - helloworld</span></span><br><span class="line">                 <span class="string">&quot;-Wall&quot;</span>                                      <span class="comment">// 开启全部警告</span></span><br><span class="line">             <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">             <span class="comment">// 错误消息获得 - 正则表达式</span></span><br><span class="line">             <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                 <span class="attr">&quot;owner&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cpp&quot;</span><span class="punctuation">,</span></span><br><span class="line">                 <span class="attr">&quot;fileLocation&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                     <span class="string">&quot;relative&quot;</span><span class="punctuation">,</span></span><br><span class="line">                     <span class="comment">// &quot;$&#123;workspaceRoot&#125;&quot;</span></span><br><span class="line">                     <span class="string">&quot;\\&quot;</span></span><br><span class="line">                 <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">                 <span class="attr">&quot;pattern&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                     <span class="attr">&quot;regexp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^(.*):(\\d+):(\\d+):\\s+(error):\\s+(.*)$&quot;</span><span class="punctuation">,</span></span><br><span class="line">                     <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">                     <span class="attr">&quot;line&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">                     <span class="attr">&quot;column&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">                     <span class="attr">&quot;severity&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">                     <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="number">5</span></span><br><span class="line">                 <span class="punctuation">&#125;</span></span><br><span class="line">             <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">             <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                 <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span>        <span class="comment">// 指定当前任务类型</span></span><br><span class="line">                 <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span>      <span class="comment">// 设置为默认任务  </span></span><br><span class="line">             <span class="punctuation">&#125;</span></span><br><span class="line">         <span class="punctuation">&#125;</span></span><br><span class="line">     <span class="punctuation">]</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<p>配置完成后，你的文件结构应该是这样的（注意 a.cpp 在 CPP 中，而不是在
+.vscode 中）：</p>
+<p><img title="" src="15_config_debug.png" alt="" data-align="center" width="700"></p>
+<p>为了测试方便， 我们写了下面这份代码演示调试流程，代码含义是计算 1~ 10
+的和：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>想要在调试过程中在某条语句处停下，你需要在对应的行前面打上断点，不打断点的话，调试和直接运行并没有明显差异：</p>
+<p><img title="" src="16_config_debug.png" alt="" data-align="center" width="600"></p>
+<p>然后按 F5，或者点击右上角的三角形选择调试，进入调试。</p>
+<p><img title="" src="17_config_debug.png" alt="" data-align="center" width="400"></p>
+<p>调试过程中，你可以按 F10 来逐步执行代码，并监控每个变量的值。
+如下图所示，我们运行到了 i = 6 这一步，第 7 行代码高亮，这表示
+<code>sum += i</code> 还没有执行，这时 sum 只累加了 1 ~ 5，所以
+<code>sum = 15</code>。</p>
+<p><img title="" src="18_config_debug.png" alt="" data-align="center" width="400"></p>
+<p>到此为止，你可以畅快的使用 VS Code 来编写 C++ 代码了！</p>
+<h2 id="其他">其他</h2>
+<h3 id="插件">插件</h3>
+<h4 id="material-icon-theme">Material Icon Theme</h4>
+<p><img title="" src="19_plugin.png" alt="" data-align="left" width="400"></p>
+<p>该插件可以美化图标，让你的代码项目结构更加清晰。</p>
+<p><img title="" src="20_plugin.png" alt="" data-align="left" width="400"></p>
+<h4 id="community-material-theme">Community Material Theme</h4>
+<p>主题美化插件</p>
+<p><img title="" src="21_plugin.png" alt="" data-align="left" width="400"></p>
+<h4 id="indent-rainbow">indent-rainbow</h4>
+<p><img title="" src="22_plugin.png" alt="" data-align="left" width="400"></p>
+<p>缩进高亮显示，代码结构更加清晰</p>
+<p><img title="" src="23_plugin.png" alt="" data-align="left" width="400"></p>
+<h4 id="bracket-pair-colorizer-2">Bracket Pair Colorizer 2</h4>
+<p>彩虹括号</p>
+<p><img title="" src="25_plugin.png" alt="" data-align="left" width="400"></p>
+<p>详细配置教程：https://blog.csdn.net/hazelnut_x/article/details/108910971</p>
+<p><img title="" src="24_plugin.png" alt="" data-align="left" width="400"></p>
+<h3 id="python">Python</h3>
+<p>VS Code 也可以用来编写 Python，它的配置方法可以参考这里：<a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/64994681">Python in VS Code</a></p>
+<p>除了编写基本的python，你也可以通过安装 jupyter 插件来方便的编写 ipynb
+文件。<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/378378346">Python +
+Jupyter</a></p>
+<h3 id="go">Go</h3>
+<p><a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/azure/developer/go/configure-visual-studio-code">VS
+Code for Go</a></p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    机器学习学习笔记（持续更新）
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/Anaconda-jupyter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Anaconda&amp;Jupyter快速上手</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
