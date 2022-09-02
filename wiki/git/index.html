@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>版本控制系统——git | 智能缓存&amp;资源调度组</title>
+    
+    
+        <meta name="keywords" content="版本控制系统——git" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="本页面将着重介绍 Git 这一版本控制系统，与 GitHub 相关的内容，请参考 GitHub 帮助  Git 是目前使用最广泛的版本控制系统之一。OI Wiki 也使用了 Git 作为版本控制系统。 安装 Windows 使用安装向导安装  本节以 Git for Windows 2.28.0（2020-07-27 更新）为例。安装页面的选项可能会随着时间而变动。  Windows 系统可以在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="版本控制系统——git">
+<meta property="og:url" content="https://dsis-scss.github.io/wiki/git/index.html">
+<meta property="og:site_name" content="智能缓存&amp;资源调度组">
+<meta property="og:description" content="本页面将着重介绍 Git 这一版本控制系统，与 GitHub 相关的内容，请参考 GitHub 帮助  Git 是目前使用最广泛的版本控制系统之一。OI Wiki 也使用了 Git 作为版本控制系统。 安装 Windows 使用安装向导安装  本节以 Git for Windows 2.28.0（2020-07-27 更新）为例。安装页面的选项可能会随着时间而变动。  Windows 系统可以在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git3.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git4.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git5.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git6.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git7.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git8.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git9.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git10.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git1.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git2.png">
+<meta property="og:image" content="https://dsis-scss.github.io/wiki/git/git11.png">
+<meta property="article:published_time" content="2022-09-02T12:50:05.000Z">
+<meta property="article:modified_time" content="2022-09-02T13:03:41.129Z">
+<meta property="article:author" content="DSIS_SCSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dsis-scss.github.io/wiki/git/git3.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="智能缓存&amp;资源调度组" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">智能缓存&amp;资源调度组</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a>
+                
+                    <a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a>
+                
+                    <a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E6%96%B0%E4%BA%BA%E6%8C%87%E5%BC%95">新人指引</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E7%BB%B4%E6%8A%A4%E4%BA%BA%E5%91%98">维护人员</a></td>
+                
+                    <td><a class="main-nav-link" href="/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0">如何贡献一篇文章?</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            知识
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            体系结构
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%85%A5%E9%97%A8/">分布式系统入门(MIT 6.824)</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            机器学习
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">机器学习学习笔记（持续更新）</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            论文
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%97%B6%E5%BA%8F%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86/">时序预测论文整理</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            资源
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            书目
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/DDIA-%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8/">DDIA-设计数据密集型应用</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            工具
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            科研软件
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Zotero/">文献管理工具-Zotero</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/Anaconda-jupyter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">Anaconda&Jupyter快速上手</a></li>  <li class="file"><a href="/wiki/vscode/">VSCode 快速上手</a></li>  <li class="file"><a href="/wiki/Latex/">Latex</a></li>  <li class="file"><a href="/wiki/WSL/">WSL(在Windows上运行Linux)</a></li>  <li class="file active"><a href="/wiki/git/">版本控制系统——git</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>链接</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://wnlo.hust.edu.cn/">华中科技大学武汉光电国家研究中心官网</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://idsm.wnlo.hust.edu.cn/index.htm">智能数据存储与管理实验室主页</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/tools/">工具</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/git/">
+            <time datetime="2022-09-02T12:50:05.000Z" itemprop="datePublished">2022-09-02</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            版本控制系统——git
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#windows"><span class="toc-number">1.1.</span> <span class="toc-text">Windows</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85%E5%90%91%E5%AF%BC%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用安装向导安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用包管理器安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux"><span class="toc-number">1.2.</span> <span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#macos"><span class="toc-number">1.3.</span> <span class="toc-text">macOS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">2.1.</span> <span class="toc-text">设置用户信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">2.2.</span> <span class="toc-text">配置编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E9%85%8D%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">显示配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%93%E5%BA%93%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80"><span class="toc-number">3.</span> <span class="toc-text">仓库操作基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA-git-%E4%BB%93%E5%BA%93"><span class="toc-number">3.1.</span> <span class="toc-text">新建 Git 仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">跟踪文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95"><span class="toc-number">3.3.</span> <span class="toc-text">查看提交记录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">4.1.</span> <span class="toc-text">分支的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E5%90%88%E5%B9%B6"><span class="toc-number">4.2.</span> <span class="toc-text">分支的合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="toc-number">4.3.</span> <span class="toc-text">解决合并冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%90%88%E5%B9%B6%E6%96%B9%E5%BC%8F"><span class="toc-number">4.4.</span> <span class="toc-text">其他合并方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#squash%E5%8E%8B%E7%BC%A9"><span class="toc-number">4.4.1.</span> <span class="toc-text">Squash（压缩）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rebase%E5%8F%98%E5%9F%BA"><span class="toc-number">4.4.2.</span> <span class="toc-text">Rebase（变基）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">5.</span> <span class="toc-text">管理远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E6%9F%A5%E7%9C%8B"><span class="toc-number">5.1.</span> <span class="toc-text">远程仓库的查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">5.2.</span> <span class="toc-text">远程仓库的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%94%B9"><span class="toc-number">5.3.</span> <span class="toc-text">从远程仓库获取更改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E6%9B%B4%E6%94%B9%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">5.4.</span> <span class="toc-text">将更改推送到远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%BD%E8%B8%AA%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">5.5.</span> <span class="toc-text">追踪远程分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-ssh-%E8%BF%9E%E6%8E%A5"><span class="toc-number">5.6.</span> <span class="toc-text">使用 ssh 连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-gui-tools"><span class="toc-number">6.</span> <span class="toc-text">Git GUI Tools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">外部链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%E4%B8%8E%E6%B3%A8%E9%87%8A"><span class="toc-number">8.</span> <span class="toc-text">参考资料与注释</span></a></li></ol>
+                </div>
+            
+        
+        
+            <blockquote>
+<p>本页面将着重介绍 Git 这一版本控制系统，与 GitHub 相关的内容，请参考
+<a target="_blank" rel="noopener" href="https://docs.github.com/cn">GitHub 帮助</a></p>
+</blockquote>
+<p>Git 是目前使用最广泛的版本控制系统之一。<strong>OI Wiki</strong>
+也使用了 Git 作为版本控制系统。</p>
+<h2 id="安装">安装</h2>
+<h3 id="windows">Windows</h3>
+<h4 id="使用安装向导安装">使用安装向导安装</h4>
+<blockquote>
+<p>本节以 Git for Windows 2.28.0（2020-07-27
+更新）为例。安装页面的选项可能会随着时间而变动。</p>
+</blockquote>
+<p>Windows 系统可以在 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git
+官网</a> 获取到 Git for Windows（下文简称 Git）的安装包。</p>
+<p>下载完成后，运行 Git 的安装程序。弹出的页面如下图所示。</p>
+<p><img src="git3.png" /></p>
+<p>点击 <code>Next &gt;</code>，选择安装路径。</p>
+<p><img src="git4.png" /></p>
+<p>点击 <code>Next &gt;</code>，选择安装可选项。</p>
+<p><img src="git5.png" /></p>
+<p>默认的选项如上图所示，均不建议取消勾选。其他未勾选的选项可以依照需求勾选。</p>
+<p>??? note "各选项功能详解" 默认勾选的选项：</p>
+<pre><code>-   `Windows Explorer integration`：资源管理器集成（右键菜单）。
+    - `Git Bash Here`：在当前目录运行 Git 命令行。
+    - `Git GUI Here`：在当前目录运行 Git 图形化页面。
+- `Git LFS`：安装 Git Large File Support（大文件支持）。[^note1]
+- `Associate .git* configuration files with the default text editor`：将所有 `.git` 配置文件与默认文本编辑器关联，并用其打开。默认文本编辑器会在后面配置。
+- `Associate .sh files to be run with Bash`：将所有扩展名为 `.sh` 的文件与 Git Bash 关联，并用其执行。
+
+* * *
+
+默认不勾选的选项：
+
+-   `Additional icons`
+    - `On the Desktop`：让 Git 在桌面创建快捷方式。
+- `Use a TrueType font in all console windows`：让 Git 在所有命令行（包括 cmd 命令行窗口）中都使用 TrueType 字体。
+- `Check daily for Git for Windows updates`：让 Git 每天检查更新。</code></pre>
+<p>点击 <code>Next &gt;</code>，选择存放 Git
+快捷方式的开始菜单文件夹。若勾选
+<code>Don't create a Start Menu folder</code>，则 Git
+不会在开始菜单创建快捷方式。</p>
+<p><img src="git6.png" /></p>
+<p>点击 <code>Next &gt;</code>，选择默认的编辑器。</p>
+<p><img src="git7.png" /></p>
+<p>在下拉菜单栏中，Git 提供了 nano、<a
+href="./editor/vim.md">Vim</a>、<a
+href="./editor/npp.md">Notepad++</a>、<a
+href="./editor/vscode.md">Visual Studio Code</a>、Visual Studio Code
+Insiders（VS Code 预览版）、Sublime Text、<a
+href="./editor/atom.md">Atom</a> 和 VSCodium
+作为默认编辑器的预设方案。如果系统已经安装了上述的一种或多种编辑器，可以直接选择其中一种并进入下一步。另外，还可通过
+<code>Select other editor as Git's default editor</code>
+项手动指定默认编辑器。</p>
+<p><img src="git8.png" /></p>
+<p>除了 Vim
+外，如果选择了尚未安装的编辑器，安装程序会阻止使用者进入下一步。<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>用户可以通过给出的官网链接跳转到下载页面，完成编辑器的安装后继续安装
+Git。</p>
+<p><img src="git9.png" /></p>
+<p>选好默认编辑器后，点击 <code>Next &gt;</code> 进入下一步。</p>
+<p>接下来的每一步都直接点击 <code>Next &gt;</code>。当
+<code>Next &gt;</code> 变为 <code>Install</code> 时，按下
+<code>Install</code> 进行安装。</p>
+<p>最后，该页面出现，Git 安装完成。此时可以取消勾选
+<code>View Release Notes</code>，然后按下 <code>Next &gt;</code>
+直接退出；也可以直接按下 <code>Next &gt;</code>
+查看版本更新信息；亦可以勾选 <code>Launch Git Bash</code> 运行 Git
+命令行。</p>
+<p><img src="git10.png" /></p>
+<h4 id="使用包管理器安装">使用包管理器安装</h4>
+<p>在 <a target="_blank" rel="noopener" href="https://scoop.sh/"><code>scoop</code></a> 或 <a
+target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli"><code>winget</code></a>
+可用的情况下，Git for Windows 可以使用以下命令安装：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scoop install git</span><br><span class="line"><span class="comment">#或者</span></span><br><span class="line">winget install Git.Git</span><br></pre></td></tr></table></figure>
+<p>这种安装方式的好处是安装过程由系统接管，相对安装向导而言更为方便。需要注意的是，这种方式默认编辑器为
+<code>vim</code>。</p>
+<h3 id="linux">Linux</h3>
+<p>Linux 系统可以通过包管理器进行安装。不同 Linux
+发行版的安装方式可能不同，<a
+target="_blank" rel="noopener" href="https://git-scm.com/download/linux">Git 官网</a>
+给出了不同系统下的安装方式。</p>
+<h3 id="macos">macOS</h3>
+<p>macOS 系统只需在终端执行 <code>brew install git</code>
+命令即可安装。（需安装 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>）</p>
+<h2 id="配置">配置</h2>
+<p>Git
+根据配置文件的应用范围，将配置文件分为不同的等级，其中较常用的有两个级别<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>：</p>
+<ol type="1">
+<li>适用于当前用户的全局配置文件，该用户操作本系统上的所有仓库时都会查询该配置文件。</li>
+<li>适用于当前仓库的配置文件。</li>
+</ol>
+<p>当多个配置文件对同一个选项作出设置的时候，局部设置会自动覆盖全局设置。因此如果需要在某个仓库应用特定的设置的话，只需更改该仓库下的特定设置即可，不会对全局设置造成影响。</p>
+<p>修改配置文件需要用到 <code>git config</code> 命令。</p>
+<h3 id="设置用户信息">设置用户信息</h3>
+<p>安装 Git
+后，第一件事情就是设置你的用户名和邮箱。这些信息在每次提交时都会用到。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;OI Wiki&quot;</span></span><br><span class="line">$ git config --global user.email oi-wiki@example.com</span><br></pre></td></tr></table></figure>
+<p>???+note
+这里给出的用户名和邮箱仅供演示。您在根据本页面的内容配置时，请记得将这里的用户名和邮箱改成自己的信息。</p>
+<p>这里的 <code>--global</code>
+表示修改的是全局配置，即该设置对当前用户下的所有仓库均有效。如果不添加
+<code>--global</code> 选项，则会默认修改当前仓库下的配置文件。</p>
+<p>如果想要修改某个仓库的特定设置，只需在该仓库下执行不带
+<code>--global</code> 的命令即可。</p>
+<h3 id="配置编辑器">配置编辑器</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.editor emacs</span><br></pre></td></tr></table></figure>
+<p>执行如上命令可以将编辑器更改为 <a
+href="./editor/emacs.md">Emacs</a>。</p>
+<p>在 Windows 下，Git 的默认编辑器可以在安装 Git
+时选择（见前文）。之后若要修改，在 Git Bash
+里输入如上命令，将编辑器名换成编辑器的绝对路径，运行命令即可。</p>
+<h3 id="显示配置">显示配置</h3>
+<p>可以通过 <code>git config -l</code>
+列出当前已经设置的所有配置参数。使用 <code>git config --global -l</code>
+可以列出所有全局配置。</p>
+<h2 id="仓库操作基础">仓库操作基础</h2>
+<h3 id="新建-git-仓库">新建 Git 仓库</h3>
+<p>新建一个 Git
+仓库非常简单，只需在想要建立仓库的文件夹输入如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>Git 将在当前文件夹新建一个 <code>.git</code>
+文件夹，一个仓库就这样建好了。</p>
+<p>如果想把一个仓库克隆到自己的电脑上（比如将 <strong>OI Wiki</strong>
+的代码拷贝到本地上进行编辑），采用 <code>git clone</code> 命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/OI-wiki/OI-wiki</span><br></pre></td></tr></table></figure>
+<p>???+note "远程仓库的链接" 这里给出的仓库链接是 HTTP(S)
+链接，也即我们采用了 HTTP(S) 方式连接到远程仓库。</p>
+<pre><code>事实上，连接到远程仓库的方式还有多种。其中使用 ssh 连接到远程仓库的方法更为方便和安全，在「远程仓库的管理」部分我们会简单介绍使用 ssh 连接到远程仓库的方法。</code></pre>
+<p>这样，被克隆的仓库的内容就会被储存到当前文件夹下一个与仓库同名的新文件夹。在本例中，当前文件夹下会出现一个名为
+<code>OI-wiki</code> 的新文件夹。</p>
+<h3 id="跟踪文件">跟踪文件</h3>
+<p>在对仓库的文件做出了一些更改后，这些更改需要被纳入到版本管理当中去。</p>
+<p>使用 <code>git status</code> 命令可以查看当前仓库文件的状态。</p>
+<p>举个例子，在一个空仓库中新增了一个 <code>README.md</code>
+文件后，执行 <code>git status</code> 命令的效果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line"></span><br><span class="line">        README.md</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use <span class="string">&quot;git add&quot;</span> to track)</span><br></pre></td></tr></table></figure>
+<p>这里的 Untracked files 指的是 Git
+之前没有纳入版本跟踪的文件。如果文件没有纳入版本跟踪，对该文件的更改不会被
+Git 记录。</p>
+<p>执行 <code>git add &lt;文件&gt;</code>
+命令可以将指定的文件纳入到版本跟踪中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git add README.md <span class="comment"># 将这个文件纳入到版本跟踪中</span></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   README.md</span><br></pre></td></tr></table></figure>
+<p>这时 <code>README.md</code>
+已经纳入了版本跟踪，放入了暂存区。接下来只需执行 <code>git commit</code>
+命令就可以提交这次更改了。</p>
+<p>但在进行这一工作之前，让我们先对 <code>README.md</code>
+做点小更改。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ vim README.md <span class="comment"># 随便更改点东西</span></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   README.md</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore -- &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">        modified:   README.md</span><br></pre></td></tr></table></figure>
+<p>你会发现 <code>README.md</code>
+同时处于暂存区和非暂存区。实际上，是否处于暂存区是对于更改而言的，而不是对于文件而言的，所以对
+<code>README.md</code>
+的前一次更改已被纳入暂存区，而后一次更改还没有。如果这时候执行
+<code>git commit</code>
+命令，只有处于暂存区的更改会被提交，而非暂存区的更改，则不会被提交。</p>
+<p>Git 给了一条提示，执行 <code>git add README.md</code>
+就可以将非暂存区的更改放入暂存区了。</p>
+<p>???+note "一次性将所有更改放入暂存区" <code>git add</code>
+命令会将对指定的文件的更改放入暂存区中。</p>
+<pre><code>在多数情况下，用户更期望一次性将所有更改都放入暂存区中，这时候可以应用 `git add -A` 命令。该命令会将所有更改（包括未被纳入版本跟踪的文件，不包括被忽略的文件）放入暂存区。
+
+如果只需更新已被纳入版本跟踪的文件，而不将未纳入版本跟踪的文件加入暂存区，可以使用 `git add -u`。</code></pre>
+<p>???+note "忽略文件"
+有些时候我们并不希望将一些文件（如可执行文件等）纳入到版本跟踪中。这时候可以在仓库根目录下创建
+<code>.gitignore</code> 文件，在该文件里写下想要忽略的文件。Git
+将不会将这些文件纳入到版本跟踪中。</p>
+<pre><code>例如，`*.exe` 将自动忽略仓库里的所有扩展名为 `.exe` 的文件。</code></pre>
+<p>现在将非暂存区的文件加入暂存区，将所有更改一并提交（commit）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git add README.md</span><br><span class="line">$ git commit <span class="comment"># 接下来会弹出编辑器页面，你需要写下 commit 信息</span></span><br><span class="line">[master (root-commit) f992763] initial commit</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"> create mode 100644 README.md</span><br></pre></td></tr></table></figure>
+<p>现在重点观察一下这一次 commit 的信息。</p>
+<p><code>master</code> 表示当前位于 <code>master</code>
+分支（关于分支的问题，下文将会详细介绍），<code>b13c84e</code>
+表示本次提交的 SHA-1 校验和的前几位，后面则是本次提交的信息。</p>
+<p>需要特别关注的是这里的 SHA-1
+校验码，每个校验码都与某个时刻仓库的一个快照相对应。利用这一特性我们可以访问历史某个时刻的仓库快照，并在该快照上进行更改。</p>
+<p>接下来两行则详细说明了本次更新涉及的文件更改。</p>
+<p>另外，commit 过程中可以利用几个参数来简化提交过程：</p>
+<ul>
+<li><code>-a</code>：在提交前将所有已跟踪的文件的更改放入暂存区。需要注意的是未被跟踪的文件（新创建的文件）不会被自动加入暂存区，需要用
+<code>git add</code> 命令手动添加。</li>
+<li><code>-m</code>：该参数后跟提交信息，表示以该提交信息提交本次更改。例如
+<code>git commit -m "fix: typo"</code> 会创建一条标题为
+<code>fix: typo</code> 的 commit。</li>
+</ul>
+<h3 id="查看提交记录">查看提交记录</h3>
+<p>使用 <code>git log</code> 命令可以查看仓库的提交历史记录。</p>
+<p>可以看到，提交历史里记录了每次提交时的 SHA-1
+校验和，提交的作者，提交时间和 commit 信息。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit ae9dd3768a405b348bc6170c7acb8b6cb5fe333e (HEAD -&gt; master)</span><br><span class="line">Author: OI Wiki &lt;oi-wiki@example.com&gt;</span><br><span class="line">Date:   Sun Sep 13 00:30:18 2020 +0800</span><br><span class="line"></span><br><span class="line">    feat: update README.md</span><br><span class="line"></span><br><span class="line">commit f99276362a3c260d439364c505a7a06859f34bf9</span><br><span class="line">Author: OI Wiki &lt;oi-wiki@example.com&gt;</span><br><span class="line">Date:   Sun Sep 13 00:06:07 2020 +0800</span><br><span class="line"></span><br><span class="line">    initial commit</span><br></pre></td></tr></table></figure>
+<h2 id="分支管理">分支管理</h2>
+<p>为什么版本管理中需要分支管理呢？答案主要有两点：</p>
+<ol type="1">
+<li>直接更改主分支不仅会使历史记录混乱，也可能会造成一些危险的后果。</li>
+<li>通过分支，我们可以专注于当前的工作。如果我们需要完成两个不同的工作，只需开两个分支即可，两个分支间的工作互不干扰。</li>
+</ol>
+<p>在 Git 中，简单来说，分支就是指向某个快照的指针。每次提交时，Git
+都会为这次提交创建一个快照，并将当前分支的指针移动到该快照。</p>
+<p>另外还有一个 HEAD 指针，它指向当前所在的分支。</p>
+<p>切换分支的过程，简单来说就是将 HEAD
+指针，从指向当前所在的分支，改为指向另外一个分支。在这一过程中，Git
+会自动完成文件的更新，使得切换分支后仓库的状态与目标分支指向的快照一致。</p>
+<h3 id="分支的创建">分支的创建</h3>
+<p>利用 <code>git branch</code>
+命令可以创建分支，<code>git switch</code>
+命令可以切换分支，<code>git switch -c</code>
+命令可以创建分支并切换到这个新分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git switch -c dev <span class="comment"># 创建一个叫做 dev 的新分支并切换当前分支到 dev</span></span><br><span class="line">Switched to branch <span class="string">&#x27;dev&#x27;</span></span><br><span class="line">$ git branch <span class="comment"># 查看分支列表</span></span><br><span class="line">  master</span><br><span class="line">* dev</span><br></pre></td></tr></table></figure>
+<p><code>dev</code> 前面的星号代表该仓库的当前分支为
+<code>dev</code>，接下来对这个仓库的更改都将记录在这个分支上。</p>
+<p>试着创建一个新文件 <code>aplusb.cpp</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vim aplusb.cpp</span><br><span class="line">$ git add aplusb.cpp</span><br><span class="line">$ git commit -m <span class="string">&quot;feat: add A+B Problem code&quot;</span></span><br><span class="line">[dev 5da093b] feat: add A+B Problem code</span><br><span class="line"> 1 file changed, 7 insertions(+)</span><br><span class="line"> create mode 100644 aplusb.cpp</span><br></pre></td></tr></table></figure>
+<p>现在切换回 <code>master</code> 分支，这时候文件夹中没有了
+<code>aplusb.cpp</code>，一切都回到了刚刚创建 <code>dev</code>
+分支时的状态。这时候可以在 <code>master</code>
+分支上继续完成其他的工作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git switch master</span><br><span class="line">Switched to branch <span class="string">&#x27;master&#x27;</span></span><br><span class="line">$ vim README.md <span class="comment"># 对 README 做些小改动</span></span><br><span class="line">$ git commit -a -m <span class="string">&quot;feat: update README.md&quot;</span></span><br><span class="line">[master 5ca15f0] feat: update README.md</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+<p>下面用一张图来解释刚才的操作过程。</p>
+<img src="/wiki/git/git1.png" class="">
+<p><code>master</code> 分支被标红，表明在这几次操作后，它是当前分支（即
+HEAD 指向的位置）。</p>
+<ul>
+<li>最开始时 <code>master</code> 指向 <code>ae9dd37</code>
+这一快照。</li>
+<li>接下来在 <code>master</code> 所在的位置创建了一个新的 dev
+分支，该分支一开始和 master 指向相同位置。</li>
+<li>在 <code>dev</code> 分支上作了一些更改（创建了
+<code>aplusb.cpp</code>），进行了一次提交，本次提交后，<code>dev</code>
+分支指向 <code>5da093b</code> 这一快照。</li>
+<li>切换回 <code>master</code> 分支后，因为 <code>master</code>
+分支还指向 <code>ae9dd37</code>，还没有创建
+<code>aplusb.cpp</code>，因此仓库中没有这一文件。</li>
+<li>接下来在 <code>master</code> 分支上进行更改（更新了
+<code>README.md</code>），进行了一次提交，<code>master</code> 分支指向了
+<code>5ca15f0</code> 这一快照。</li>
+</ul>
+<h3 id="分支的合并">分支的合并</h3>
+<p>当一个分支上的工作已经完成，就可以将这些工作合并到另外一个分支上去。</p>
+<p>还是接着上面这个例子，<code>dev</code> 分支的工作已经完成，通过
+<code>git merge</code>
+命令可以将该分支合并到当前分支（<code>master</code>）上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev</span><br><span class="line">Merge made by the <span class="string">&#x27;recursive&#x27;</span> strategy.</span><br><span class="line"> aplusb.cpp | 7 +++++++</span><br><span class="line"> 1 file changed, 7 insertions(+)</span><br><span class="line"> create mode 100644 aplusb.cpp</span><br></pre></td></tr></table></figure>
+<img src="/wiki/git/git2.png" class="">
+<p>这次合并具体是怎么执行的呢？</p>
+<p>在合并之前，<code>master</code> 指向 <code>5ca15f0</code>，而
+<code>dev</code> 指向
+<code>5da093b</code>，这两个状态并不在一条链上。</p>
+<p>Git 会找到这两个状态的最近公共祖先（在上图中是
+<code>ae9dd37</code>），并对这三个快照进行一次合并。三个快照合并的结果作为一个新的快照，并将当前分支指向这一快照。</p>
+<p>合并过程本身也是一次提交，不过与常规提交不同的是，合并提交有不止一个前驱提交，它是多个提交状态合并后的结果。</p>
+<p>在合并完成后，<code>dev</code>
+分支就完成了它的使命，这时候可以利用下面的命令删除 <code>dev</code>
+分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev <span class="comment"># 对于未合并的分支，可以使用 -D 参数强制删除</span></span><br></pre></td></tr></table></figure>
+<p>不过合并过程并非总是这么顺利，在某些情况下，合并过程可能会出现冲突，这个问题接下来会讲到。</p>
+<h3 id="解决合并冲突">解决合并冲突</h3>
+<p>如果在两个分支中，对同一个文件的同一部分进行了不同的更改，Git
+就无法自动合并这两个分支，也就是发生了合并冲突。</p>
+<p>接着上面的例子，假如你在合并后的 <code>master</code>
+分支的基础上，新开了一个 <code>readme-refactor</code>
+分支，准备重写一份自述文件。但因为一些疏忽，你同时更改了
+<code>readme-refactor</code> 和 <code>master</code> 分支的自述文件。</p>
+<p>刚开始自述文件是这样的：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># This is a test repo.</span></span><br><span class="line"></span><br><span class="line">This repo includes some c++ codes.</span><br></pre></td></tr></table></figure>
+<p>在 <code>readme-refactor</code> 分支下的自述文件是这样的：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Code Library</span></span><br><span class="line"></span><br><span class="line">This repo includes some c++ codes.</span><br></pre></td></tr></table></figure>
+<p>在 <code>master</code> 分支下的自述文件是这样的：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># This is a code library.</span></span><br><span class="line"></span><br><span class="line">This repo includes some c++ codes.</span><br></pre></td></tr></table></figure>
+<p>这时候运行 <code>git merge readme-refactor</code> 命令，Git
+提示出现了合并冲突。</p>
+<p>执行一下 <code>git status</code>
+命令，可以查看是哪些文件引发了冲突。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">You have unmerged paths.</span><br><span class="line">  (fix conflicts and run <span class="string">&quot;git commit&quot;</span>)</span><br><span class="line"></span><br><span class="line">Unmerged paths:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to mark resolution)</span><br><span class="line"></span><br><span class="line">    both modified:      README.md</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>如何解决冲突？对于每个发生了合并冲突的文件，Git
+都会在这些文件中加入标准的冲突解决标记。比如这个例子中的
+<code>README.md</code> 文件，打开后它长这个样子：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"><span class="section"># This is a code library.</span></span><br><span class="line">======</span><br><span class="line"><span class="section"># Code Library</span></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt; readme-refactor</span><br><span class="line"></span><br><span class="line">This repo includes some c++ codes.</span><br></pre></td></tr></table></figure>
+<p><code>======</code>
+作为分界线将两个分支的内容隔开，<code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>
+标记和 <code>======</code> 之间的部分是 HEAD 指针（<code>master</code>
+分支）的内容，而 <code>======</code> 和
+<code>&gt;&gt;&gt;&gt;&gt;&gt; readme-refactor</code> 标记之间的部分是
+<code>readme-refactor</code> 分支的内容。</p>
+<p>通过编辑文本来处理冲突，删除这些冲突标记，保存文件，将这些文件纳入暂存区后提交，就可以解决合并冲突了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add README.md <span class="comment"># 将发生冲突的文件纳入暂存区</span></span><br><span class="line">$ git commit</span><br><span class="line">[master fe92c6b] Merge branch readme-refactor into master</span><br></pre></td></tr></table></figure>
+<h3 id="其他合并方式">其他合并方式</h3>
+<p>默认情况下，Git 采用
+Merge（合并）的方式合并两个分支。使用该方法将分支 B 并入分支 A 时，会将
+B 分支的所有 commit 并入 A 分支的提交历史中。</p>
+<p>除此以外，Git 还提供了两种合并分支的方式：Squash（压缩）和
+Rebase（变基）。</p>
+<h4 id="squash压缩">Squash（压缩）</h4>
+<p>使用 Squash 方式将分支 B 并入分支 A 时，在 B
+分支上的所有更改会被合并为一次 commit 提交到 A 分支。</p>
+<p>在 <code>git merge</code> 中加入 <code>--squash</code> 参数即可使用
+Squash 方式进行分支合并。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch&gt; --squash</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，在执行上述命令后，Git 只会将 B 分支的所有更改存入 A
+分支的缓冲区内，接下来还需要执行一次 <code>git commit</code>
+命令完成合并工作。</p>
+<p>使用 Squash 方式合并可以简化 commit 记录，但是会丢失具体到每一次
+commit 的信息（每次 commit 的提交者，每次 commit
+的更改等等），只留下合并为一个整体的信息（每次 commit 的提交者会以
+"Co-authored-by" 的形式在提交信息中列出）。但如果是在 GitHub 上进行
+Squash and Merge，原有的信息都可以在 Pull Request 中查看。</p>
+<h4 id="rebase变基">Rebase（变基）</h4>
+<p>使用 Rebase 方式将分支 B 并入分支 A 时，在 B 分支上的每一次 commit
+都会单独添加到 A 分支，而不再像 Merge 方式那样创建一个合并 commit
+来合并两个分支的内容<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。</p>
+<p>首先，切换到 B 分支，接下来将 B 分支变基到 A 分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout B</span><br><span class="line">git rebase A</span><br></pre></td></tr></table></figure>
+<p>现在切回到 A 分支，再执行一次 <code>git merge</code> 命令，即可完成将
+B 分支的内容合并到 A 分支的工作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout A</span><br><span class="line">git merge B</span><br></pre></td></tr></table></figure>
+<p>使用 Rebase 完成合并可以让提交历史线性化，在适当的场景下正确地使用
+Rebase 可以达到比 Merge 更好的效果。但是这样做会改变提交历史，在进行
+Rebase 时和 Rebase
+后再进行相关合并操作时都会增加出现冲突的可能，如果操作不当可能反而会使提交历史变得杂乱。因此，如果对
+Rebase 操作没有充分的了解，不建议使用。</p>
+<h2 id="管理远程仓库">管理远程仓库</h2>
+<p>在本地完成更改后，你可能会需要将这些更改推送到 GitHub 等 Git
+仓库托管平台上。托管在这些平台上的仓库就归属于远程仓库的范畴——你可以从这些仓库中获取信息，也可以将你作出的更改推送到远程仓库上。与其他人的协作往往离不开远程仓库，因此学会管理远程仓库很有必要。</p>
+<h3 id="远程仓库的查看">远程仓库的查看</h3>
+<p>使用 <code>git remote</code> 命令可以查看当前仓库的远程仓库列表。</p>
+<p>如果当前仓库是克隆来的，那么应该会有一个叫做 origin
+的远程仓库，它的链接就是克隆时用的链接。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure>
+<p>如果要查看某个远程仓库的详细信息的话，可以这样操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git remote show origin</span><br><span class="line">* remote origin</span><br><span class="line">  Fetch URL: git@github.com:OI-wiki/OI-wiki.git</span><br><span class="line">  Push  URL: git@github.com:OI-wiki/OI-wiki.git</span><br><span class="line">  HEAD branch: master</span><br><span class="line">  Remote branches:</span><br><span class="line">    git             tracked</span><br><span class="line">    master          tracked</span><br><span class="line">  ...</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<h3 id="远程仓库的配置">远程仓库的配置</h3>
+<p>执行 <code>git remote add &lt;name&gt; &lt;url&gt;</code>
+命令可以添加一个名字为 <code>name</code>，链接为 <code>url</code>
+的远程仓库。</p>
+<p>执行 <code>git remote rename &lt;oldname&gt; &lt;newname&gt;</code>
+可以将名字为 <code>oldname</code> 的远程仓库改名为
+<code>newname</code>。</p>
+<p>执行 <code>git remote rm &lt;name&gt;</code> 可以删除名字为
+<code>name</code> 的远程仓库。</p>
+<p>执行 <code>git remote get-url &lt;name&gt;</code> 可以查看名字为
+<code>name</code> 的远程仓库的链接。</p>
+<p>执行 <code>git remote set-url &lt;name&gt; &lt;newurl&gt;</code>
+可以将名字为 <code>name</code> 的远程仓库的链接更改为
+<code>newurl</code>。</p>
+<h3 id="从远程仓库获取更改">从远程仓库获取更改</h3>
+<p>在远程仓库中，其他人可能会推送一些更改，执行 <code>git fetch</code>
+命令可以将这些更改获取到本地。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch &lt;remote-name&gt; <span class="comment"># 获取 &lt;remote-name&gt; 的更改</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，<code>git fetch</code>
+命令只会获取远程仓库的更改，而不会将这些更改合并到本地仓库中。如果需要将这些更改进行合并，可以使用
+<code>git pull</code> 命令。在默认情况下，<code>git pull</code> 相当于
+<code>git fetch</code> 后 <code>git merge FETCH_HEAD</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull &lt;remote-name&gt; &lt;branch&gt; <span class="comment"># 获取 &lt;remote-name&gt; 的更改，然后将这些更改合并到 HEAD</span></span><br></pre></td></tr></table></figure>
+<h3 id="将更改推送到远程仓库">将更改推送到远程仓库</h3>
+<p>当你完成了一些更改之后，使用 <code>git push</code>
+命令可以将这些更改推送到远程仓库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push &lt;remote&gt; &lt;from&gt;:&lt;to&gt; <span class="comment"># 将本地 &lt;from&gt; 分支的更改推送至 &lt;remote&gt; 的 &lt;to&gt; 分支</span></span><br></pre></td></tr></table></figure>
+<p>根据远程仓库的要求，可能会要求你输入远程仓库账户的用户名和密码。</p>
+<p>需要注意的是，你的更改能成功推送，需要满足两个条件：你拥有向这个仓库（分支）的写入权限，且你的这个分支比远程仓库的相应分支新（可以理解为没有人在你进行更改的这段时间进行了推送）。当远程分支有当前分支没有的新更改时，可以执行
+<code>git pull</code> 命令完成合并再提交。</p>
+<p>如果你需要强制将本地分支的更改推送到远程仓库的话，可以加入
+<code>-f</code> 参数。此时
+<strong>远程仓库的提交历史会被本地的提交历史覆盖</strong>，因此该命令应谨慎使用。更好的选择是使用
+<code>--force-with-lease</code>
+参数，该参数仅在远程仓库没有更新时才会进行覆盖。需要注意的是，此处“更新”是相对于上一次
+fetch 而言的，如果使用了 VS Code 提供的 Auto Fetch
+功能，可能会没有注意到更新而使 <code>--force-with-lease</code> 和
+<code>-f</code> 一样危险。</p>
+<h3 id="追踪远程分支">追踪远程分支</h3>
+<p>通过将一个本地分支设定为追踪远程分支，可以方便地查看本地分支与远程分支的差别，并能简化与远程分支交互时的操作。</p>
+<p>在开始追踪前，你需要先执行 <code>git fetch &lt;remote-name&gt;</code>
+将远程仓库的信息抓取到本地。</p>
+<p>接下来执行
+<code>git switch &lt;remote-branch&gt;</code>，会在本地自动创建名字为
+<code>&lt;remote-branch&gt;</code>
+的新分支，并设定该分支自动追踪相应的远程分支。</p>
+<p>???+note
+需要注意，只有当本地不存在该分支，且恰好只有一个远程分支的名字与该分支匹配时，Git
+才会自动创建该分支且设定其追踪相应的远程分支。</p>
+<p>这时候执行 <code>git status</code>
+命令，会提示当前分支与远程分支之间的差别。</p>
+<p>因为设定了本地分支追踪的远程分支，向远程分支推送的命令也被简化了。只需要执行
+<code>git push</code>
+命令，在本地分支上作出的更改就能被推送至其追踪的远程分支。</p>
+<p>对于本地已有的分支，设定其对应的远程追踪分支也很容易。只需在当前分支下执行
+<code>git branch -u &lt;remote-name&gt;/&lt;remote-branch&gt;</code>，就可以设定当前的本地分支追踪
+<code>&lt;remote-name&gt;/&lt;remote-branch&gt;</code>
+这一远程分支。</p>
+<h3 id="使用-ssh-连接">使用 ssh 连接</h3>
+<p>与 HTTP(S) 相比，使用 ssh 连接到远程仓库更为方便安全。</p>
+<p>在使用 ssh 连接到远程仓库之前，需要先在本地添加 ssh
+密钥。接下来需要将本地添加的 ssh 密钥的 <strong>公钥</strong>
+上传到远程仓库账户。</p>
+<p>考虑到本文主要是给 <strong>OI Wiki</strong> 的贡献者提供一个使用 Git
+的教程，这里直接给出 <a
+target="_blank" rel="noopener" href="https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh">GitHub
+Docs 提供的教程</a>，供各位读者参考。</p>
+<p>完成以上步骤后，你就可以通过 ssh 连接到远程仓库了。下面就是一条通过
+ssh 连接 clone <strong>OI Wiki</strong> 仓库的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:OI-wiki/OI-wiki.git</span><br></pre></td></tr></table></figure>
+<p>将更改推送至远程仓库的过程与使用 HTTP(S) 连接类似。但使用 ssh
+连接可以免去验证远程仓库帐号密码的过程。</p>
+<h2 id="git-gui-tools">Git GUI Tools</h2>
+<p>对于不熟悉命令行的同学，纯命令行的 Git 的上手难度可能会偏高，而借助
+GUI 工具可以一定程度上降低 Git 的上手难度。此外，相比于命令行，GUI
+工具在查看 diff 以及 log 时在体验上有一定程度的提高。</p>
+<p>Git 本身自带有 GUI，市面上也有很多优秀的 Git GUI 工具，例如针对
+Windows 用户的 TortoiseGit<a href="#fn4" class="footnote-ref"
+id="fnref4" role="doc-noteref"><sup>4</sup></a>，支持 Windows 和 Mac 的
+Sourcetree<a href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>等。</p>
+<p>这里简单介绍一下 TortoiseGit 的使用。下载并安装好 TortoiseGit
+之后，在本地仓库的目录下，单击鼠标右键，在右键菜单中就可以看到 Git
+的各个功能。</p>
+<p><img src="git11.png" /></p>
+<p>详细的使用方法这里不再赘述，可以参考官网里的使用文档或者通过搜索引擎学习，例如
+<a
+target="_blank" rel="noopener" href="https://tortoisegit.org/docs/tortoisegit/index.html">TortoiseGit
+Manual</a>。</p>
+<p>很多 GUI 工具都有官方中文支持，例如 Git Desktop 以及
+TortoiseGit。但是还是会有部分翻译看起来较为变扭，推荐使用英文版本。</p>
+<h2 id="外部链接">外部链接</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/docs">Git Reference</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Pro Git Book</a></li>
+<li><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/">Learn Git
+Branching</a></li>
+</ul>
+<h2 id="参考资料与注释">参考资料与注释</h2>
+<section class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>但是，Git for Windows 对 Vim
+的描述是“虽然强大，但是可能会难以使用。用户界面反人类，键位映射卡手。Git
+使用 Vim 作为默认编辑器只是出于历史原因，强烈推荐换用一个 UI
+设计现代化的编辑器。”，并给“难以使用”加上了 <a
+target="_blank" rel="noopener" href="https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/">Stack
+Overflow 每年帮助一百万名开发者退出 Vim</a> 的页面链接。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>事实上 Git
+还有一个针对系统上每一个用户及系统上所有仓库的通用配置文件，该配置文件覆盖范围最广，等级在用户配置文件之上。因为该配置实践中较少使用，这里不再展开。<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p><a
+target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA">Pro
+Git Book</a> 中提供了可视化的 Rebase 过程图，借助图片读者可以更好地理解
+Rebase 的机制。<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p><a
+target="_blank" rel="noopener" href="https://tortoisegit.org/">TortoiseGit</a><a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p><a
+target="_blank" rel="noopener" href="https://www.sourcetreeapp.com/">Sourcetree</a><a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/wiki/WSL/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">WSL(在Windows上运行Linux)</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
